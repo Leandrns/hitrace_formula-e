@@ -5,7 +5,7 @@ export const Chat = () => {
     const messageRef = useRef()
     const [messageList, setMessageList] = useState([])
 
-    const socket = io.connect('http://localhost:3001')
+    const socket = io.connect('https://hitrace-formula-e.vercel.app/')
 
     useEffect(() => {
         socket.on('receive_message', data => {
@@ -17,7 +17,7 @@ export const Chat = () => {
 
     const enviar = () => {
         const message = messageRef.current.value
-        if(!message.trim()) return
+        if (!message.trim()) return
 
         socket.emit('message', message)
         clearInput()
@@ -36,7 +36,7 @@ export const Chat = () => {
                         <h3 className="autor">{message.author}</h3>
                         <p className="mensagem">{message.text}</p>
                     </div>
-                    
+
                 ))
             }
             <input type="text" ref={messageRef} placeholder="Digite uma mensagem..." />
