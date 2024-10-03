@@ -4,8 +4,12 @@ import { io } from "socket.io-client"
 export const Chat = () => {
     const messageRef = useRef()
     const [messageList, setMessageList] = useState([])
+    const socket = ''
 
-    const socket = io.connect('https://server-hitrace.onrender.com')
+    const conectaServer = async () => {
+        socket = await io.connect('https://server-hitrace.onrender.com')
+    }
+    conectaServer()
 
     useEffect(() => {
         socket.on('receive_message', data => {
