@@ -5,7 +5,7 @@ export const Chat = () => {
     const messageRef = useRef()
     const [messageList, setMessageList] = useState([])
 
-    const socket = io.connect('http://localhost:3001')
+    const socket = io.connect('https://server-hitrace.onrender.com')
 
     useEffect(() => {
         socket.on('receive_message', data => {
