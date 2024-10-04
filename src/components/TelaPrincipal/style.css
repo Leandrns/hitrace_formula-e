@@ -18,11 +18,17 @@
     display: flex;
 }
 
+.conversas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width: 980px){
     .tela-principal {
         width: 100%;
+        height: calc(100vh - 120px);
     }
 }
-
 
 

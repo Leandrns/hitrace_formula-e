@@ -1,7 +1,6 @@
 .header {
     display: flex;
     justify-content: space-between;
-    gap: 130px;
     align-items: center;
     background-color: #0E29B4;
     height: 80px;
@@ -14,5 +13,11 @@
 .header img {
     height: 80%;
     margin-left: 20px;
+}
+
+@media screen and (max-width: 400px) {
+    .header img {
+        height: 60%;
+    }
 }
 
