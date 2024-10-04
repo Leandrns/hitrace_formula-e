@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './style.css';
 
 const Button = ({ text, isActive, onClick }) => { 

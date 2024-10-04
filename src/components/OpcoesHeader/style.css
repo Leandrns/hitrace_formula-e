@@ -7,7 +7,6 @@
     margin-right: 40px;
     color: white;
     font-size: 18px;
-    width: 1500px;
 }
 
 #opcoes li {
@@ -30,7 +29,61 @@
 
 @media screen and (max-width: 980px) {
     #opcoes {
-        font-size: 12px;
+        font-size: 14px;
         gap: 50px;
+    }
+}
+
+.toggle-btn {
+    color: #f5f5f5;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    margin-right: 20px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: calc(100% + 20px);
+    min-height: 100px;
+    background: #414141c4;
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    user-select: none; 
+}
+
+.dropdown li {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dropdown li p {
+    padding: 5px 18px;
+    transition: all .3s ease;
+    color: #f1f1f1;
+    font-family: 'Mina';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.dropdown li:hover p {
+    background-color: #46ddff8a;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 810px) {
+    .toggle-btn {
+        display: block;
+    }
+    #opcoes {
+        display: none;
+    }
+    .dropdown.open {
+        display: block;
     }
 }

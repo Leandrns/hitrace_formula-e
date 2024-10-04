@@ -2,7 +2,7 @@ import './style.css'
 import { InfosCorrida } from '../InfosCorrida'
 import { TimerMercado } from '../TimerMercado/index.jsx'
 import { Escolhas } from '../Escolhas/index.jsx'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ListaOpcoes } from '../ListaOpcoes/index.jsx'
 import { AoVivo } from '../AoVivo/index.jsx';
 
