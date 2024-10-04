@@ -26,3 +26,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background:rgb(21, 21, 44);
 }
+
+@media screen and (max-width: 980px) {
+  .tela-principal.tela-cheia {
+    width: 100%;
+  }
+}

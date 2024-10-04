@@ -8,4 +8,50 @@
     justify-content: space-between;
     font-family: "Mina";
     z-index: 1;
+    position: relative;
+    transition: all .5s;
 }
+
+.logo-game {
+    width: 80px;
+    padding: 10px;
+}
+
+.openAside {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    background-color: #0e29b4;
+    padding: 8px;
+    border-radius: 10px;
+    color: #f1f1f1;
+}
+
+@media screen and (max-width: 980px){
+    .aside {
+        position: absolute;
+        left: -196px;
+        width: 196px;
+        background-color: #d9d9d973;
+        backdrop-filter: blur(5px);
+    }
+
+    .aside i {
+        transition: all .5s ease;
+    }
+
+    .aside.open {
+        left: 0;
+    }
+
+    .aside.open i {
+        transform: rotate(180deg);
+    }
+
+    .openAside {
+        display: flex;
+        right: -22px;
+    }
+}
+

@@ -2,6 +2,8 @@
     width: 80%;
     margin: 20px;
     font-family: "Mina";
+    overflow-x: hidden;
+    max-height: calc(100vh - 120px);
 }
 
 .box-infos {
@@ -10,5 +12,16 @@
     gap: 30px;
     align-items: center;
 }
+
+.boas-vindas {
+    display: flex;
+}
+
+@media screen and (max-width: 980px){
+    .tela-principal {
+        width: 100%;
+    }
+}
+
 
 

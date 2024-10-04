@@ -1,5 +1,4 @@
 import './style.css'
-import imgPiloto2 from '../../images/de_vries.png'
 import { Escolha } from '../Escolha'
 
 export const Pilotos2 = ({exibirListaOpcoes}) => {

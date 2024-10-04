@@ -1,4 +1,3 @@
-import imgMotor from '../../images/jaguar.png'
 import { Escolha } from '../Escolha';
 import './style.css';
 

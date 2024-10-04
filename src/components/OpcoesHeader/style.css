@@ -2,6 +2,7 @@
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 100px;
     margin-right: 40px;
     color: white;
@@ -25,4 +26,11 @@
 #opcoes li p {
     margin: 0;
     font-family: 'Michroma';
+}
+
+@media screen and (max-width: 980px) {
+    #opcoes {
+        font-size: 12px;
+        gap: 50px;
+    }
 }

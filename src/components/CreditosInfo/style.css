@@ -1,27 +1,35 @@
 .score-box {
-    width: 200px; /* Define o tamanho da caixa */
-    padding: 10px;
-    border: 1px solid #ccc; /* Adiciona uma borda */
-    border-radius: 8px; /* Cantos arredondados */
-    background-color: #f9f9f9; /* Cor de fundo */
-  }
-  
-  .score-header {
-    display: flex;
-    justify-content: space-between; /* Espaçamento entre os itens */
-  }
-  
-  .score-item {
-    text-align: center; /* Centraliza o texto dentro de cada item */
-  }
-  
-  .score-item h4 {
-    margin: 0; /* Remove margens dos títulos */
-    font-size: 14px; /* Tamanho do título */
-  }
-  
-  .score-item p {
-    margin: 5px 0 0; /* Margem entre o título e o valor */
-    font-size: 18px; /* Tamanho dos valores */
-    font-weight: bold;
-  }
+  width: 200px;
+  /* Define o tamanho da caixa */
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* Adiciona uma borda */
+  border-radius: 8px;
+  /* Cantos arredondados */
+  background-color: #f9f9f9;
+  /* Cor de fundo */
+}
+
+.score-header {
+  display: flex;
+  justify-content: space-between;
+  /* Espaçamento entre os itens */
+}
+
+.score-item {
+  text-align: center;
+  /* Centraliza o texto dentro de cada item */
+}
+
+.score-item h4 {
+  margin: 0;
+  /* Remove margens dos títulos */
+  font-size: 12px;
+  /* Tamanho do título */
+}
+
+.score-item p {
+  font-size: 18px;
+  /* Tamanho dos valores */
+  font-weight: bold;
+}

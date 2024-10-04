@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import './style.css';
 
-const Button = ({ text, isActive, onClick }) => { // Corrigido para começar com letra maiúscula
+const Button = ({ text, isActive, onClick }) => { 
     return (
         <button className={isActive ? 'nav-button active' : 'nav-button'}
                 onClick={onClick}>
@@ -9,4 +10,4 @@ const Button = ({ text, isActive, onClick }) => { // Corrigido para começar com
     );
 };
 
-export default Button; // Assegure-se de que o nome aqui está correto
+export default Button; 

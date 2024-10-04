@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from "react"
-import { io } from "socket.io-client"
 
-export const Chat = () => {
+export const Chat = ({ socket }) => {
     const messageRef = useRef()
     const [messageList, setMessageList] = useState([])
-    const socket = io.connect('https://server-hitrace.onrender.com')
 
     useEffect(() => {
         socket.on('receive_message', data => {

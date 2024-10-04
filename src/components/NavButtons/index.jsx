@@ -9,14 +9,16 @@ const NavButtons = ( {telaAtiva, setTelaAtual} ) => {
         { text: 'Entenda o jogo', id: 'tela4' }, 
         { text: 'Ranking', id: 'tela5'}
     ];
-
+        
     return (
         <div className="nav-buttons">
             {buttons.map((button) => (
                 <Button key={button.id} 
                         text={button.text}
                         isActive={telaAtiva === button.id}
-                        onClick={() => setTelaAtual(button.id)} />
+                        onClick={() => {
+                            setTelaAtual(button.id)
+                        }} />
             ))}
         </div>
     );

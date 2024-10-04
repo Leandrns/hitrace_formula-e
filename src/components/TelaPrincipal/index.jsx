@@ -2,7 +2,7 @@ import './style.css'
 import { InfosCorrida } from '../InfosCorrida'
 import { TimerMercado } from '../TimerMercado/index.jsx'
 import { Escolhas } from '../Escolhas/index.jsx'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ListaOpcoes } from '../ListaOpcoes/index.jsx'
 import { AoVivo } from '../AoVivo/index.jsx';
 
@@ -216,7 +216,7 @@ export const TelaPrincipal = ({ telaAtiva }) => {
     switch(telaAtiva) {
         case 'tela1':
             return (
-                <div className='tela-principal'>
+                <div className='tela-principal escalacao'>
                     <div className="box-infos">
                         <InfosCorrida />
                         <TimerMercado />
@@ -257,35 +257,35 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         
         case 'tela2':
             return (
-                <div className="tela-principal">
+                <div className="tela-principal estatisticas">
 
                 </div>
             )
 
         case 'tela3':
             return (
-                <div className="tela-principal">
+                <div className="tela-principal conversas">
                     <AoVivo />
                 </div>
             )
 
         case 'tela4':
             return (
-                <div className="tela-principal">
+                <div className="tela-principal entenda-jogo">
 
                 </div>
             )
 
         case 'tela5':
             return (
-                <div className="tela-principal">
+                <div className="tela-principal ranking">
 
                 </div>
             )
 
         default:
             return (
-                <div className="tela-principal">
+                <div className="tela-principal boas-vindas">
                     <p>Seja bem-vindo ao HitRace</p>
                 </div>
             )
