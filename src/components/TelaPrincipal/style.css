@@ -4,6 +4,7 @@
     font-family: "Mina";
     overflow-x: hidden;
     max-height: calc(100vh - 120px);
+    
 }
 
 .box-infos {
@@ -14,13 +15,11 @@
     flex-wrap: wrap;
 }
 
-.boas-vindas {
-    display: flex;
-}
 
 @media screen and (max-width: 980px){
     .tela-principal {
         width: 100%;
+        overflow-x: hidden;
     }
 }
 
