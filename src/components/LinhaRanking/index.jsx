@@ -2,7 +2,7 @@ import "../Ranking/style.css"
 
 export const LinhaRanking = (props) => {
     return(
-        <div className="paragrafo">
+        <div className="rank">
             <div className="num">
             <p>{props.numero}</p>
             </div>
