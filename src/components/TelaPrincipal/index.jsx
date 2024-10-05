@@ -5,6 +5,7 @@ import { Escolhas } from '../Escolhas/index.jsx'
 import { useState } from 'react'
 import { ListaOpcoes } from '../ListaOpcoes/index.jsx'
 import { AoVivo } from '../AoVivo/index.jsx';
+import { EntendaJogo } from '../EntendaJogo/index.jsx'
 
 const pilotos1 = [
     {
@@ -272,7 +273,7 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         case 'tela4':
             return (
                 <div className="tela-principal entenda-jogo">
-
+                    <EntendaJogo/>
                 </div>
             )
 
