@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { ListaOpcoes } from '../ListaOpcoes/index.jsx'
 import { AoVivo } from '../AoVivo/index.jsx';
 import { PaginaInicial } from '../PaginaInicial/index.jsx'
-import PilotosGrid from '../Estatisticas/index.jsx'
+import Estatisticas from '../Estatisticas/index.jsx'
 
 const pilotos1 = [
     {
@@ -341,7 +341,7 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         case 'tela2':
             return (
                 <div className="tela-principal estatisticas">
-                    <PilotosGrid />
+                    <Estatisticas />
                 </div>
             )
 

@@ -1,6 +1,48 @@
 .join-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    height: 35vh;
+    background-color: #0E29B4;
+    padding: 20px;
+    border-radius: 20px;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+.join-container input {
+    font-family: 'Mina';
+    padding: 10px;
+    text-align: center;
+    border: solid 3px #202020d0;
+    border-radius: 10px;
+    transition: all .3s ease;
+    font-size: 16px;
+}
+
+.join-container input:focus {
+    scale: 1.05;
+    box-shadow: 0 0 0 2px #f1f1f1;
+}
+
+.join-container button {
+    font-family: 'Mina';
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color: #2b74b8;
+    color: #f1f1f1;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all .3s ease;
+    text-align: center;
+}
+
+.join-container button:hover {
+    background-color: #f1f1f1;
+    color: #202020;
+    box-shadow: 0 0 0 3px #0E29B4;
 }

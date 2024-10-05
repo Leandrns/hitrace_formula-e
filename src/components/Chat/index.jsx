@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import './style.css'
 
 export const Chat = ({ socket }) => {
     const messageRef = useRef()
@@ -27,17 +28,22 @@ export const Chat = ({ socket }) => {
     return (
         <div className="chat">
             <h2>Chat</h2>
+            <div className="mensagens">
             {
                 messageList.map((message, index) => (
-                    <div className="message" key={index}>
+                    <div className={message.authorId === socket.id ? 'mensagem mine' : 'mensagem'} key={index}>
                         <h3 className="autor">{message.author}</h3>
-                        <p className="mensagem">{message.text}</p>
+                        <span className="texto">{message.text}</span>
                     </div>
 
                 ))
             }
-            <input type="text" ref={messageRef} placeholder="Digite uma mensagem..." />
-            <button onClick={enviar}>Enviar</button>
+            </div>
+                <div className="actions">
+                    <input type="text" ref={messageRef} placeholder="Digite uma mensagem..." />
+                    <button onClick={enviar}><i class="fa-solid fa-circle-arrow-right"></i></button>
+                </div>
+            
         </div>
     )
 }
