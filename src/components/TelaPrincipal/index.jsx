@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { ListaOpcoes } from '../ListaOpcoes/index.jsx'
 import { AoVivo } from '../AoVivo/index.jsx';
 import { EntendaJogo } from '../EntendaJogo/index.jsx'
+import { Ranking } from '../Ranking/index.jsx'
 
 const pilotos1 = [
     {
@@ -280,7 +281,7 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         case 'tela5':
             return (
                 <div className="tela-principal ranking">
-
+                    <Ranking/>
                 </div>
             )
 
