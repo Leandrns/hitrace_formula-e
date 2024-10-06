@@ -4,6 +4,7 @@
     font-family: "Mina";
     overflow-x: hidden;
     max-height: calc(100vh - 120px);
+    
 }
 
 .box-infos {
@@ -12,10 +13,6 @@
     gap: 30px;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.boas-vindas {
-    display: flex;
 }
 
 .conversas {

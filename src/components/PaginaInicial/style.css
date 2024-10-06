@@ -1,0 +1,37 @@
+.cabecalho {
+    display: block; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    font-family: 'michroma';
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    overflow-x: hidden;
+}
+
+body.loaded .cabecalho {
+    opacity: 1;
+}
+
+.cabecalho h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 10em;
+    font-size: 13px;
+}
+
+
+.cabecalho img {
+    max-width: 100%;
+    display: block; 
+    margin: 0 auto;
+}
+
+.pilotosfoto{
+    padding-top: 20px;
+    width: 80%;
+}

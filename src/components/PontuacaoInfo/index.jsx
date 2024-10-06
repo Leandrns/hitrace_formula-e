@@ -1,13 +1,13 @@
-import './style.css'
+import './style.css';
 
-const Pontuacao = () => {
+const Pontuacao = ({ pontuacaoWehrlein, pontuacaoEvans, pontuacaoMahindra, pontuacaoMahindraBio }) => {
     return (
       <div className="score-item">
         <h4>Pontuação</h4>
-        <p>88.5</p>
+        <p>{pontuacaoWehrlein + pontuacaoEvans + pontuacaoMahindra + pontuacaoMahindraBio}</p>
+        <p></p>
       </div>
     );
-  };
-  
-  export default Pontuacao; // Certifique-se de que o componente está sendo exportado corretamente
-  
+};
+
+export default Pontuacao; // Certifique-se de que o componente está sendo exportado corretamente

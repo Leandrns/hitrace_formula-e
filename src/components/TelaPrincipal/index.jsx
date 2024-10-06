@@ -137,7 +137,7 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         case 'tela2':
             return (
                 <div className="tela-principal estatisticas">
-
+                    <Estatisticas />
                 </div>
             )
 
@@ -151,21 +151,21 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         case 'tela4':
             return (
                 <div className="tela-principal entenda-jogo">
-
+                    <EntendaJogo/>
                 </div>
             )
 
         case 'tela5':
             return (
                 <div className="tela-principal ranking">
-
+                    <Ranking/>
                 </div>
             )
 
         default:
             return (
                 <div className="tela-principal boas-vindas">
-                    <p>Seja bem-vindo ao HitRace</p>
+                    <PaginaInicial />
                 </div>
             )
     }  
