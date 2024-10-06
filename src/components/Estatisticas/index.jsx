@@ -1,6 +1,5 @@
 import { Corrida } from "../Corrida";
 import { ClassPilotos } from "../ClassPilotos";
-import { ClassGeral } from "../ClassGeral";
 import './style.css'
 
 const Estatisticas = () => {

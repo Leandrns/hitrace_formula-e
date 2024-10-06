@@ -17,7 +17,7 @@ const pilotos = [
     { nome: 'De Vries', equipe: 'Mahindra' }, 
 ];
 
-const pontuacaoPorPosicao = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1];
+const pontuacaoPorPosicao = [25, 18, 15, 12, 10, 8, 6, 4, 2, 2];
 
 const equipes = [
     { nome: 'Envision', pilotos: ['Buemi', 'Frijns'] },
@@ -29,9 +29,9 @@ const equipes = [
 ];
 
 const motores = [
-    { nome: 'MahindraBio', equipes: ['Mahindra', 'ERT'] },
+    { nome: 'Mahindra M9', equipes: ['Mahindra', 'ERT'] },
     { nome: 'PorscheBio', equipes: ['Porsche'] },
-    { nome: 'JaguarBio', equipes: ['Jaguar'] },
+    { nome: 'Jaguar Type-6', equipes: ['Jaguar'] },
 ];
 
 
@@ -139,41 +139,46 @@ export const ClassPilotos = () => {
 
     return (
         <div className='classPilotos'>
-            <h2>Classificação da Corrida (TOP-10)</h2>
-            <ul>
-                {posicoes.map((piloto, index) => (
-                    <li key={index} className="piloto-item">
-                        {piloto.posicao} - {piloto.nome} Bateria: 
-                        <div className="bateria">
-                            <div className="bateria-nivel" style={{ width: `${baterias[index].bateria}%` }}></div>
-                        </div>
-                        <div>Pontuação: {pontuacoes[index]}</div>
-                    </li>
-                ))}
-            </ul>
-            <h2>Pontuação das Equipes</h2>
-            <ul>
-                {pontuacoesEquipes.map((equipe, index) => (
-                    <li key={index}>
-                        {equipe.nome}: {equipe.pontuacao} pontos
-                    </li>
-                ))}
-            </ul>
-            <h2>Pontuação dos Motores</h2>
-            <ul>
-                {pontuacoesMotores.map((motor, index) => (
-                    <li key={index}>
-                        {motor.nome}: {motor.pontuacao} pontos
-                    </li>
-                ))}
-            </ul>
             <PontuacaoInfo 
                 pontuacaoWehrlein={getPontuacaoPorNome('Wehrlein')}
                 pontuacaoEvans={getPontuacaoPorNome('Evans')}
                 pontuacaoMahindra={pontuacoesEquipes.find(equipe => equipe.nome === 'Mahindra')?.pontuacao || 0}
-                pontuacaoMahindraBio={pontuacoesMotores.find(motor => motor.nome === 'MahindraBio')?.pontuacao || 0}
+                pontuacaoMahindraBio={pontuacoesMotores.find(motor => motor.nome === 'Mahindra M9')?.pontuacao || 0}
             />
             <button onClick={reiniciarCorrida}>Reiniciar Corrida</button>
+            <div className='listaClass'>
+                
+                <ul>
+                <h2>Classificação da Corrida</h2>
+                    {posicoes.map((piloto, index) => (
+                        <li key={index} className="piloto-item">
+                            {piloto.posicao} - {piloto.nome} - Bateria: 
+                            <div className="bateria">
+                                <div className="bateria-nivel" style={{ width: `${baterias[index].bateria}%` }}></div>
+                            </div>
+                            <div>Pontuação: {pontuacoes[index]}</div>
+                        </li>
+                    ))}
+                </ul>
+               
+                <ul>
+                <h2>Pontuação das Equipes</h2>
+                    {pontuacoesEquipes.map((equipe, index) => (
+                        <li key={index} className="piloto-item">
+                            {equipe.nome}: {equipe.pontuacao} pontos
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <h2>Pontuação dos Motores</h2>
+            <ul>
+                {pontuacoesMotores.map((motor, index) => (
+                    <li key={index} className="piloto-item">
+                        {motor.nome}: {motor.pontuacao} pontos
+                    </li>
+                ))}
+            </ul>
+            
         </div>
     );
 };

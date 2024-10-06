@@ -8,6 +8,7 @@ import { AoVivo } from '../AoVivo/index.jsx';
 import { EntendaJogo } from '../EntendaJogo/index.jsx'
 import { PaginaInicial } from '../PaginaInicial/index.jsx'
 import Estatisticas from '../Estatisticas/index.jsx'
+import { Ranking } from '../Ranking/index.jsx'
 
 const pilotos1 = [
     {
@@ -363,7 +364,7 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         case 'tela5':
             return (
                 <div className="tela-principal ranking">
-
+                    <Ranking/>
                 </div>
             )
 
