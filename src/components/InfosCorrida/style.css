@@ -10,9 +10,21 @@
 
 .infos {
     display: flex;
-    gap: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .title-info {
     font-weight: 500;
+}
+
+@media screen and (max-width: 520px) {
+    .infos-corrida p {
+        font-size: 14px;
+    }
+
+    .infos-corrida {
+        width: 90%;
+    }
 }

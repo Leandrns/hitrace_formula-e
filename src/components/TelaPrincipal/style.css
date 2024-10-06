@@ -4,7 +4,7 @@
     font-family: "Mina";
     overflow-x: hidden;
     max-height: calc(100vh - 120px);
-    
+    position: relative;
 }
 
 .box-infos {
