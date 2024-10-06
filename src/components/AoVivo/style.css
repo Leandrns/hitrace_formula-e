@@ -1,7 +1,28 @@
 .ao-vivo {
     width: 100%;
     height: 100%;
+}
+
+.video-chat {
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.video-chat img {
+    width: 65%;
+}
+
+@media screen and (max-width: 874px) {
+    .video-chat {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .video-chat img {
+        width: 95%;
+    }
 }
