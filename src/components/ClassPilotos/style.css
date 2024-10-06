@@ -1,0 +1,44 @@
+.classPilotos {
+    padding: 20px;
+    max-width: 800px; /* Define uma largura máxima para manter a lista centrada */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    background-color: #f9f9f9; /* Fundo sutil para destacar a seção */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+}
+
+.classPilotos ul {
+    list-style-type: decimal;
+    
+    margin-bottom: 20px;
+}
+
+.piloto-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.piloto-item:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+
+.bateria {
+    width: 150px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bateria-nivel {
+    height: 10px;
+    background-color: rgb(92, 243, 92);
+    transition: width 0.1s ease;
+}

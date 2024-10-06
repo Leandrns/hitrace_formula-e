@@ -7,10 +7,11 @@ const Estatisticas = () => {
   return (
     <div className="estatistica">
       <Corrida />
+      
       <h1>Estatísticas</h1>
       <div className='tabela'>
         <ClassPilotos />
-        <ClassGeral />
+        
       </div>
       
     </div>
