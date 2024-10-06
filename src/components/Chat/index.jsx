@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react"
 import './style.css'
 
 export const Chat = ({ socket }) => {
-    const bottomRef = useRef()
     const messageRef = useRef()
     const [messageList, setMessageList] = useState([])
 
