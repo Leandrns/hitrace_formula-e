@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import './style.css'
 
 export const Chat = ({ socket }) => {
+    const bottomRef = useRef()
     const messageRef = useRef()
     const [messageList, setMessageList] = useState([])
 
@@ -19,10 +20,20 @@ export const Chat = ({ socket }) => {
 
         socket.emit('message', message)
         clearInput()
+        focusInput()
     }
 
     const clearInput = () => {
         messageRef.current.value = ''
+    }
+
+    const focusInput = () => {
+        messageRef.current.focus()
+    }
+
+    const getEnterKey = (e) => {
+        if(e.key === 'Enter')
+          enviar()
     }
 
     return (
@@ -40,7 +51,7 @@ export const Chat = ({ socket }) => {
             }
             </div>
                 <div className="actions">
-                    <input type="text" ref={messageRef} placeholder="Digite uma mensagem..." />
+                    <input type="text" ref={messageRef} placeholder="Digite uma mensagem..." onKeyDown={(e)=>getEnterKey(e)} />
                     <button onClick={enviar}><i class="fa-solid fa-circle-arrow-right"></i></button>
                 </div>
             
