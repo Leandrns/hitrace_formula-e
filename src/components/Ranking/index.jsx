@@ -19,10 +19,145 @@ export const Ranking = (props) => {
                             <td>000 pts</td>
                             <td>0000 pts</td>
                         </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
+                        <tr className="sombra">
+                            <td>1</td>
+                            <td>user01</td>
+                            <td>000 pts</td>
+                            <td>0000 pts</td>
+                        </tr>
                     </table>
-                </div>
-                <div className="fim">
-                    <button className="btn">Carregar mais usuários...</button>
                 </div>
             </div>
         </div>
