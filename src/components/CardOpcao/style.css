@@ -8,6 +8,7 @@
     align-items: center;
     width: 100%; 
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 .card-opcao img {
@@ -18,14 +19,11 @@
 
 .card-opcao:hover{
     background-color: rgba(0, 102, 255, 0.507);
-    transition: all 0.5s ease;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.685);
 }
 
-@media (max-width: 480px) {
-    .card-opcao{
-        
-        font-size: 7px;
+@media (max-width: 620px) {
+    .card-opcao p, .card-opcao h2 {
+        font-size: 14px;
     }
 }
 

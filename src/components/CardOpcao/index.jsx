@@ -1,6 +1,4 @@
 import './style.css'
-let escolhido = false;
-
 
 export const CardOpcao = ({tipo, id, nome, equipe, imgSrc, preco, desempenho, onClose}) => {
     const adicionarAosEscolhidos = () => {
@@ -16,10 +14,8 @@ export const CardOpcao = ({tipo, id, nome, equipe, imgSrc, preco, desempenho, on
                 <h2>{nome}</h2>
                 <p>{equipe}</p>
             </div>
-            <p className='desempenho'>Desempenho: {desempenho}</p>
-            {escolhido === true 
-                ? <i class="bi bi-check-lg"></i> 
-                : <h2 className='preco'>{preco}</h2>}
+            <p className='desempenho'><i className="bi bi-star"></i> {desempenho}</p>
+            <h2 className='preco'>{preco}</h2>
         </div>
     )
 }

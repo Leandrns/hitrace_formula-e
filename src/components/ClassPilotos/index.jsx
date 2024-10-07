@@ -14,7 +14,7 @@ const pilotos = [
     { nome: 'Di Grassi', equipe: 'Audi' },
     { nome: 'Hughes', equipe: 'N/D' },
     { nome: 'Mortara', equipe: 'Mahindra' },
-    { nome: 'De Vries', equipe: 'Mahindra' }, 
+    { nome: 'De Vries', equipe: 'Mahindra' },
 ];
 
 const pontuacaoPorPosicao = [25, 18, 15, 12, 10, 8, 6, 4, 2, 2];
@@ -25,7 +25,7 @@ const equipes = [
     { nome: 'Jaguar', pilotos: ['Evans'] },
     { nome: 'Penske', pilotos: ['Vergne', 'Vandoorne'] },
     { nome: 'ERT', pilotos: ['Di Grassi'] },
-    { nome: 'Mahindra', pilotos: ['De Vries','Mortara'] },
+    { nome: 'Mahindra', pilotos: ['De Vries', 'Mortara'] },
 ];
 
 const motores = [
@@ -33,20 +33,7 @@ const motores = [
     { nome: 'PorscheBio', equipes: ['Porsche'] },
     { nome: 'Jaguar Type-6', equipes: ['Jaguar'] },
 ];
-
-
-const Pontuacao = ({ pontuacaoWehrlein, pontuacaoEvans, pontuacaoEnvision, pontuacaoPorsche }) => {
-    return (
-        <div>
-            <h3>Pontuações Individuais</h3>
-            <p>Wehrlein: {pontuacaoWehrlein}</p>
-            <p>Evans: {pontuacaoEvans}</p>
-            <h3>Pontuações das Equipes</h3>
-            <p>Envision: {pontuacaoEnvision}</p>
-            <p>Porsche: {pontuacaoPorsche}</p>
-        </div>
-    );
-};
+;
 
 export const ClassPilotos = () => {
     const [baterias, setBaterias] = useState(pilotos.map(p => ({ ...p, bateria: 100 })));
@@ -54,12 +41,12 @@ export const ClassPilotos = () => {
     const [pontuacoes, setPontuacoes] = useState(Array(pilotos.length).fill(0));
     const [corridaAtiva, setCorridaAtiva] = useState(true);
 
-    const reiniciarCorrida = () => {
-        setBaterias(pilotos.map(p => ({ ...p, bateria: 100 })));
-        setPosicoes(pilotos.map((p, index) => ({ ...p, posicao: index + 1 })));
-        setPontuacoes(Array(pilotos.length).fill(0));
-        setCorridaAtiva(true);
-    };
+    // const reiniciarCorrida = () => {
+    //     setBaterias(pilotos.map(p => ({ ...p, bateria: 100 })));
+    //     setPosicoes(pilotos.map((p, index) => ({ ...p, posicao: index + 1 })));
+    //     setPontuacoes(Array(pilotos.length).fill(0));
+    //     setCorridaAtiva(true);
+    // };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -79,7 +66,7 @@ export const ClassPilotos = () => {
                 const indice1 = Math.floor(Math.random() * novasPosicoes.length);
                 const indice2 = Math.floor(Math.random() * novasPosicoes.length);
                 [novasPosicoes[indice1], novasPosicoes[indice2]] = [novasPosicoes[indice2], novasPosicoes[indice1]];
-                return novasPosicoes.map((p, index) => ({ ...p, posicao: index + 1 })); 
+                return novasPosicoes.map((p, index) => ({ ...p, posicao: index + 1, animacao: true }));
             });
         }, 500);
 
@@ -132,72 +119,62 @@ export const ClassPilotos = () => {
         });
     };
 
-    const [voltas, setVoltas] = useState(0);
-
-    useEffect(() => {
-        const intervalo = setInterval(() => {
-            setVoltas(prevVoltas => {
-                if (prevVoltas < 37) {
-                    return prevVoltas + 1; // Incrementa o número de voltas
-                } else {
-                    clearInterval(intervalo); // Para o contador ao atingir 37 voltas
-                    return prevVoltas; // Retorna o número final de voltas
-                }
-            });
-        }, 800); // 800ms para contar até 37 em 30 segundos
-
-        return () => {
-            clearInterval(intervalo); // Limpa o intervalo ao desmontar o componente
-        };
-    }, []);
-    
     const pontuacoesEquipes = calcularPontuacaoEquipes();
     console.log("Pontuações das equipes:", pontuacoesEquipes); // Log para depuração
     const pontuacoesMotores = calcularPontuacaoMotores();
     console.log("Pontuações das equipes:", pontuacoesMotores); // Log para depuração
+    const pontuacaoWehrlein = getPontuacaoPorNome('Wehrlein');
+    const pontuacaoEvans = getPontuacaoPorNome('Evans');
+    const pontuacaoMahindraEquipe = pontuacoesEquipes.find(equipe => equipe.nome === 'Mahindra')?.pontuacao || 0;
+    const pontuacaoMahindraM9 = pontuacoesMotores.find(motor => motor.nome === 'Mahindra M9')?.pontuacao || 0;
+
+    const totalPontuacao = pontuacaoWehrlein + pontuacaoEvans + pontuacaoMahindraEquipe + pontuacaoMahindraM9;
 
     return (
         <div className='classPilotos'>
-            <PontuacaoInfo 
-                pontuacaoWehrlein={getPontuacaoPorNome('Wehrlein')}
-                pontuacaoEvans={getPontuacaoPorNome('Evans')}
-                pontuacaoMahindra={pontuacoesEquipes.find(equipe => equipe.nome === 'Mahindra')?.pontuacao || 0}
-                pontuacaoMahindraBio={pontuacoesMotores.find(motor => motor.nome === 'Mahindra M9')?.pontuacao || 0}
-            />
-            {/* <button onClick={reiniciarCorrida}>Reiniciar Corrida</button> */}
-            <div className='listaClass'>
-                
+            <div className='escolhasUser'>
+            <p>Pontuação Total: {totalPontuacao}</p>
+            <ul>
+                <li>PILOTO1 - Wehrlein = {pontuacaoWehrlein}</li>
+                <li>PILOTO2 - Evans = {pontuacaoEvans}</li>
+                <li>EQUIPE - Mahindra = {pontuacaoMahindraEquipe}</li>
+                <li>MOTOR - Mahindra M9 = {pontuacaoMahindraM9}</li>
+            </ul>
+            </div>
+
+            <div className="listaClassificacao">
                 <ul>
-                <h2>Classificação da Corrida</h2>
+                    <h2>Classificação da Corrida</h2>
                     {posicoes.map((piloto, index) => (
                         <li key={index} className="piloto-item">
-                            {piloto.posicao} - {piloto.nome} - <i class="fa-solid fa-bolt"></i> 
+                            {piloto.posicao} - {piloto.nome} <i class="fa-solid fa-bolt"></i>
                             <div className="bateria">
                                 <div className="bateria-nivel" style={{ width: `${baterias[index].bateria}%` }}></div>
                             </div>
-                            <div>Pontuação: {pontuacoes[index]}</div>
+                            <div>Pontos: {pontuacoes[index]}</div>
                         </li>
                     ))}
                 </ul>
-               
-                <ul>
-                <h2>Pontuação das Equipes</h2>
+
+                <ul className='listaEquipes'>
+                    <h2>Pontuação das Equipes</h2>
                     {pontuacoesEquipes.map((equipe, index) => (
                         <li key={index} className="piloto-item">
                             {equipe.nome}: {equipe.pontuacao} pontos
                         </li>
                     ))}
                 </ul>
+
+                <ul>
+                    <h2>Pontuação dos Motores</h2>
+                    {pontuacoesMotores.map((motor, index) => (
+                        <li key={index} className="piloto-item">
+                            {motor.nome}: {motor.pontuacao} pontos
+                        </li>
+                    ))}
+                </ul>
             </div>
-            <h2>Pontuação dos Motores</h2>
-            <ul>
-                {pontuacoesMotores.map((motor, index) => (
-                    <li key={index} className="piloto-item">
-                        {motor.nome}: {motor.pontuacao} pontos
-                    </li>
-                ))}
-            </ul>
-            
         </div>
+
     );
 };

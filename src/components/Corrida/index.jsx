@@ -25,9 +25,8 @@ export const Corrida = () => {
         <div className='corrida'>
             <div className="dadosCorrida">
                 <h2>E-prix de Londres</h2>
-                <p>21 de Julho de 2024</p>
+                <p>20 de Julho de 2024</p>
                 <p>Etapa 16</p>
-                <p>Corrida em andamento</p>
                 <p>Voltas: {voltas}/37</p>
             </div>
         </div>

@@ -4,7 +4,7 @@ import { CardOpcao } from '../CardOpcao'
 export const ListaOpcoes = ({opcoes, titulo, onClose}) => {
     return (
         <div className="lista-opcoes">
-            <div className="topo">
+            <div className="topo-opcoes">
                 <h2>{titulo}</h2>
                 <button onClick={onClose}><i class="bi bi-x"></i></button>
             </div>

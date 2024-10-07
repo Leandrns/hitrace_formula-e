@@ -4,6 +4,7 @@
     font-family: "Mina";
     overflow-x: hidden;
     max-height: calc(100vh - 120px);
+    position: relative;
     
 }
 
@@ -13,6 +14,12 @@
     gap: 30px;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.boas-vindas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .conversas {
