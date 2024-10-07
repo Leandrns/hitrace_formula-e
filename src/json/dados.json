@@ -26,6 +26,24 @@
             "img": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/fcc99980-3e5d-4a96-856a-8773641ceebe.png",
             "preco": 17,
             "desempenho": 15
+        },
+        {
+            "id": 3,
+            "tipo": "piloto1",
+            "nome": "Pascal WEHRLEIN",
+            "equipe": "Porsche",
+            "img": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/4b62fd44-831d-4b01-9f11-2aaf2c47075c.png",
+            "preco": 20,
+            "desempenho": 18
+        },
+        {
+            "id": 4,
+            "tipo": "piloto2",
+            "nome": "Edoardo MORTARA",
+            "equipe": "Mahindra Racing",
+            "img": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
+            "preco": 16,
+            "desempenho": 13
         }
     ],
     "pilotos2": [
@@ -55,6 +73,24 @@
             "img": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/fcc99980-3e5d-4a96-856a-8773641ceebe.png",
             "preco": 17,
             "desempenho": 15
+        },
+        {
+            "id": 3,
+            "tipo": "piloto2",
+            "nome": "Pascal WEHRLEIN",
+            "equipe": "Porsche",
+            "img": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/4b62fd44-831d-4b01-9f11-2aaf2c47075c.png",
+            "preco": 20,
+            "desempenho": 18
+        },
+        {
+            "id": 4,
+            "tipo": "piloto2",
+            "nome": "Edoardo MORTARA",
+            "equipe": "Mahindra Racing",
+            "img": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
+            "preco": 16,
+            "desempenho": 13
         }
     ],
     "tecnicos": [
@@ -95,6 +131,15 @@
             "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/05dab754-2899-411b-9c4e-72311a36cc9c.png",
             "preco": 14,
             "desempenho": 13
+        },
+        {
+            "id": 2,
+            "tipo": "equipe",
+            "nome": "Porsche",
+            "equipe": "",
+            "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/feb6762c-ae66-4c8e-a892-f958d6f7e774.png",
+            "preco": 16,
+            "desempenho": 15
         }
     ],
     "motores": [
