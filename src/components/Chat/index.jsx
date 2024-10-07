@@ -37,7 +37,7 @@ export const Chat = ({ socket }) => {
 
     return (
         <div className="chat">
-            <h2>Chat</h2>
+            <div className="title"><h2>Chat</h2><i class="fa-regular fa-comments"></i></div>
             <div className="mensagens">
             {
                 messageList.map((message, index) => (

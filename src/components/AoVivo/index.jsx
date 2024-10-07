@@ -14,7 +14,10 @@ export const AoVivo = () => {
                 chatVisibility 
                 ?
                 <div className="video-chat">
-                    <img src={corridaImg} alt="" />
+                    <div className="transmissao">
+                        <div className="title"><h2>Transmissão Ao Vivo</h2><i class="fa-solid fa-microphone-lines"></i></div>
+                        <img src={corridaImg} alt="" />
+                    </div>
                     <Chat socket={socket} /> 
                 </div>
                 : <JoinChat setSocket={setSocket} setChatVisibility={setChatVisibility} />
