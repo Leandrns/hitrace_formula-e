@@ -1,58 +1,68 @@
-.tela_ranking{
-    padding: 40px;
+.tela_ranking {
+    padding: 30px 40px 40px 40px;
 }
 
-.borda{
-    border-radius: 15px;
-    border: 1px;
+.borda {
     background-color: #F0F0F0;
+    box-shadow: inset 0px 2px 6px 0px #7e7e7e;
+    border-radius: 15px; /* Adicionando o border-radius aqui para a tabela */
+    overflow: hidden; /* Para garantir que os bordas arredondadas funcionem */
 }
-.rank{
+
+.rank {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 10px;
-    
-    box-shadow: inset 0px 2px 6px 0px #7e7e7e;
+}
+.esquerda{
+    border-left: 0px;
 }
 
-.topo{
-    border-radius: 15px 15px 0 0;
+.cima{
+    border-top: 0px;
+    font-family: "Michroma";
+    font-size: 12px;
+}
+
+.alinhamento{
+    border-top: 0px;
+    border-left: 0px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Importante para a borda */
+    border-spacing: 0;
+}
+
+th, td {
+    border: 2px solid #7e7e7e;
+    text-align: center; /* Alinhamento horizontal */
+    vertical-align: middle; /* Alinhamento vertical */
+}
+
+tr:first-child th:first-child {
+    border-top-left-radius: 15px; 
+}
+
+tr:first-child th:last-child {
+    border-top-right-radius: 15px; 
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 15px; 
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 15px; 
+}
+
+.bandeira{
+    width: 30px;
+}
+
+.titulo_pontuacao{
     display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    box-shadow: inset 0px 2px 6px 0px #7e7e7e;
-}
-
-.topo h3{
-    /* margin-left: 0;AQUI */
-}
-
-.fim{
-    border-radius: 0px 0px 15px 15px;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 15px;
-    box-shadow: inset 0px 2px 6px 0px #7e7e7e;
-}
-
-.btn{
-padding: 15px; 
-  background-color: #0E29B4; 
-  color: white; 
-  border: none; 
-  border-radius: 7px; 
-  cursor: pointer; 
-  transition: background-color 0.3s; 
-  width: 300px;
-  font-family: "Mina";
-  font-size: 16px;
-}
-
-.btn:hover {
-    background-color: #46DEFF; 
-    color: black;
-  }
-
-p{
-    font-size: 20px;
+    gap: 5px;
+    align-items: center;
 }
