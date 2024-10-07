@@ -12,7 +12,7 @@
     align-items: center; 
     padding: 10px; 
     border-radius: 10px; 
-    box-shadow: 0 0 10px 200px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 400px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     overflow-x: hidden;
 }
