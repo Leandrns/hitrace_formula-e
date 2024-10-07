@@ -131,6 +131,25 @@ export const ClassPilotos = () => {
             return { nome: motor.nome, pontuacao: pontuacaoTotal };
         });
     };
+
+    const [voltas, setVoltas] = useState(0);
+
+    useEffect(() => {
+        const intervalo = setInterval(() => {
+            setVoltas(prevVoltas => {
+                if (prevVoltas < 37) {
+                    return prevVoltas + 1; // Incrementa o número de voltas
+                } else {
+                    clearInterval(intervalo); // Para o contador ao atingir 37 voltas
+                    return prevVoltas; // Retorna o número final de voltas
+                }
+            });
+        }, 800); // 800ms para contar até 37 em 30 segundos
+
+        return () => {
+            clearInterval(intervalo); // Limpa o intervalo ao desmontar o componente
+        };
+    }, []);
     
     const pontuacoesEquipes = calcularPontuacaoEquipes();
     console.log("Pontuações das equipes:", pontuacoesEquipes); // Log para depuração
@@ -145,14 +164,14 @@ export const ClassPilotos = () => {
                 pontuacaoMahindra={pontuacoesEquipes.find(equipe => equipe.nome === 'Mahindra')?.pontuacao || 0}
                 pontuacaoMahindraBio={pontuacoesMotores.find(motor => motor.nome === 'Mahindra M9')?.pontuacao || 0}
             />
-            <button onClick={reiniciarCorrida}>Reiniciar Corrida</button>
+            {/* <button onClick={reiniciarCorrida}>Reiniciar Corrida</button> */}
             <div className='listaClass'>
                 
                 <ul>
                 <h2>Classificação da Corrida</h2>
                     {posicoes.map((piloto, index) => (
                         <li key={index} className="piloto-item">
-                            {piloto.posicao} - {piloto.nome} - Bateria: 
+                            {piloto.posicao} - {piloto.nome} - <i class="fa-solid fa-bolt"></i> 
                             <div className="bateria">
                                 <div className="bateria-nivel" style={{ width: `${baterias[index].bateria}%` }}></div>
                             </div>

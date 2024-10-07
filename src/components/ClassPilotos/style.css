@@ -38,7 +38,7 @@
 
 .bateria-nivel {
     height: 10px;
-    background-color: rgb(92, 243, 92);
+    background: linear-gradient(to right,red, rgb(0, 150, 0));        background-size: auto;
     transition: width 0.1s ease;
 }
 
