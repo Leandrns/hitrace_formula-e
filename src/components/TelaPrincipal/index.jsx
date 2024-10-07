@@ -6,6 +6,8 @@ import { useState } from 'react'
 import { ListaOpcoes } from '../ListaOpcoes/index.jsx'
 import { AoVivo } from '../AoVivo/index.jsx';
 import { EntendaJogo } from '../EntendaJogo/index.jsx'
+import { PaginaInicial } from '../PaginaInicial/index.jsx'
+import Estatisticas from '../Estatisticas/index.jsx'
 import { Ranking } from '../Ranking/index.jsx'
 
 const pilotos1 = [
@@ -35,6 +37,24 @@ const pilotos1 = [
         "img": 'https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/fcc99980-3e5d-4a96-856a-8773641ceebe.png',
         "preco": 17,
         "desempenho": 15
+    },
+    {
+        "id": 3,
+        "tipo": "piloto1",
+        "nome": "Eduardo MORTARA",
+        "equipe": "Mahindra",
+        "img": 'https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/728b2253-b9d4-47dd-9051-e970bff2a62f.png',
+        "preco": 11,
+        "desempenho": 10
+    },
+    {
+        "id": 4,
+        "tipo": "piloto1",
+        "nome": "Pascal WEHRLEIN",
+        "equipe": "Porsche",
+        "img": 'https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/4b62fd44-831d-4b01-9f11-2aaf2c47075c.png',
+        "preco": 20,
+        "desempenho": 19
     }
 ]
 
@@ -65,6 +85,24 @@ const pilotos2 = [
         "img": 'https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/fcc99980-3e5d-4a96-856a-8773641ceebe.png',
         "preco": 17,
         "desempenho": 15
+    },
+    {
+        "id": 3,
+        "tipo": "piloto1",
+        "nome": "Eduardo MORTARA",
+        "equipe": "Mahindra",
+        "img": 'https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/728b2253-b9d4-47dd-9051-e970bff2a62f.png',
+        "preco": 11,
+        "desempenho": 10
+    },
+    {
+        "id": 4,
+        "tipo": "piloto1",
+        "nome": "Pascal WEHRLEIN",
+        "equipe": "Porsche",
+        "img": 'https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/4b62fd44-831d-4b01-9f11-2aaf2c47075c.png',
+        "preco": 20,
+        "desempenho": 19
     }
 ]
 
@@ -86,7 +124,16 @@ const tecnicos = [
         "img": '/bertrand_mahindra.png',
         "preco": 14,
         "desempenho": 11
-    }
+    },
+    {
+        "id": 2,
+        "tipo": "tecnico",
+        "nome": "Sylvain FILIPPI",
+        "equipe": "Envision Racing",
+        "img": '/Sylvain.png',
+        "preco": 14,
+        "desempenho": 11
+    },
 ]
 
 const equipes = [
@@ -107,6 +154,24 @@ const equipes = [
         "img": 'https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/05dab754-2899-411b-9c4e-72311a36cc9c.png',
         "preco": 14,
         "desempenho": 13
+    },
+    {
+        "id": 2,
+        "tipo": "equipe",
+        "nome": "Nissan Formula E Team",
+        "equipe": "",
+        "img": '',
+        "preco": 15,
+        "desempenho": 16
+    },
+    {
+        "id": 3,
+        "tipo": "equipe",
+        "nome": "NEOM McLaren Formula E Team",
+        "equipe": "",
+        "img": 'https://www.formulaechampionship.com/wp-content/uploads/2023/02/McLaren.png',
+        "preco": 13,
+        "desempenho": 12
     }
 ]
 
@@ -128,6 +193,24 @@ const motores = [
         "img": 'https://cdn.worldvectorlogo.com/logos/mahindra-mahindra-logo.svg',
         "preco": 15,
         "desempenho": 13
+    },
+    {
+        "id": 2,
+        "tipo": "motor",
+        "nome": "Nissan e-4ORCE 04",
+        "equipe": "",
+        "img": 'https://logo-logos.com/2016/10/Nissan_logo.png',
+        "preco": 13,
+        "desempenho": 11
+    },
+    {
+        "id": 3,
+        "tipo": "motor",
+        "nome": "Maserati Tipo Folgore",
+        "equipe": "",
+        "img": 'https://www.carlogos.org/car-logos/maserati-logo-1951-download.png',
+        "preco": 12,
+        "desempenho": 14
     }
 ]
 
@@ -260,7 +343,7 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         case 'tela2':
             return (
                 <div className="tela-principal estatisticas">
-
+                    <Estatisticas />
                 </div>
             )
 
@@ -288,7 +371,7 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         default:
             return (
                 <div className="tela-principal boas-vindas">
-                    <p>Seja bem-vindo ao HitRace</p>
+                    <PaginaInicial />
                 </div>
             )
     }  

@@ -31,10 +31,11 @@
 @media screen and (max-width: 980px){
     .aside {
         position: absolute;
-        left: -196px;
-        width: 196px;
-        background-color: #d9d9d973;
+        left: -250px;
+        width: 250px;
+        background-color: #d9d9d9b6;
         backdrop-filter: blur(5px);
+        box-shadow: 0 0 8px black;
     }
 
     .aside i {
