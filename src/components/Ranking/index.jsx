@@ -1,30 +1,43 @@
-import "./style.css"
+import { LinhaRanking } from "../LinhaRanking";
+import "./style.css";
 
 export const Ranking = (props) => {
-    return(
+    const linhas = [];
+
+    for (let i = 1; i <= 15; i++) {
+        linhas.push(
+            <LinhaRanking
+                key={i}
+                numero={i}
+                usuario={`user${i}`}
+                melhor="000pts"
+                total="0000pts"
+            />
+        );
+    }
+
+    console.log(linhas); // Para verificar o conteúdo das linhas
+
+    return (
         <div className="tela_ranking">
-            <h2>Ranking Brasil 	&#x1f1e7;&#x1f1f7;</h2>
-            <div >
-                <div className="rank">
-                    <table className="borda">
+            <section className="titulo_pontuacao">
+                <h2>Ranking Brasil</h2> <img src="https://em-content.zobj.net/source/toss-face/381/flag-brazil_1f1e7-1f1f7.png" alt="Bandeira" className="bandeira" />
+            </section>
+            <div className="rank">
+                <table className="borda">
+                    <thead>
                         <tr>
                             <th>º</th>
-                            <th>Usuário</th>
-                            <th>Melhor rodada</th>
-                            <th>Pontuação total</th>
+                            <th className="esquerda">Usuário</th>
+                            <th className="esquerda">Melhor rodada</th>
+                            <th className="esquerda">Pontuação total</th>
                         </tr>
-                        <tr className="sombra">
-                            <td>1</td>
-                            <td>user01</td>
-                            <td>000 pts</td>
-                            <td>0000 pts</td>
-                        </tr>
-                    </table>
-                </div>
-                <div className="fim">
-                    <button className="btn">Carregar mais usuários...</button>
-                </div>
+                    </thead>
+                    <tbody>
+                        {linhas.map((linha) => linha)}
+                    </tbody>
+                </table>
             </div>
         </div>
-    )
-}
+    );
+};
