@@ -1,50 +1,152 @@
 .classPilotos {
+    background-color: #f8f9fa;
     padding: 20px;
-    max-width: 90vw;
-    margin: 0 auto; 
-    background-color: #f9f9f9; 
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.classPilotos p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    
 }
 
 .classPilotos ul {
-    list-style: decimal;
-    margin-bottom: 20px;
+    list-style-type: none;
+    padding: 0;
 }
+
+.escolhasUser {
+    background-color: #ffffff;
+    padding: 20px; 
+    margin: 20px auto; 
+    text-align: center; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    font-family: 'mina';
+    
+}
+
+.escolhasUser ul {
+    list-style-type: none; 
+    padding: 0; 
+    
+}
+
+.escolhasUser li {
+    margin: 10px 0; 
+    font-size: 16px;
+    color: #333;
+}
+
+.escolhasUser p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
 
 .piloto-item {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
+    font-family: 'mina';
     justify-content: space-between;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.piloto-item:hover {
-    background-color: #f0f0f0; 
+.piloto-item i {
+    margin-left: 5px;
+    color: #f1c40f; 
 }
-
 
 .bateria {
-    width: 150px;
     background-color: #e0e0e0;
-    border-radius: 5px;
+    border-radius: 4px;
+    width: 180px;
+    height: 10px;
+    
+    position: relative;
     overflow: hidden;
 }
 
 .bateria-nivel {
     height: 10px;
-    background-color: rgb(92, 243, 92);
+    
+    background: linear-gradient(to right,red, rgb(0, 150, 0));        background-size: auto;
     transition: width 0.1s ease;
 }
 
+.piloto-item:hover {
+    background-color: #f0f0f0;
+}
 
-.listaClass{
+.classPilotos h2 {
+    font-size: 22px;
+    color: #2980b9;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'michroma';
+}
+
+.piloto-item div {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.pontuacaoEquipe, .pontuacaoMotor {
+    font-size: 18px;
+    color: #2980b9;
+}
+.listaClassificacao {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.listaClassificacao ul {
+    flex: 1 1 48%;
+    list-style-type: none;
+    padding: 0;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.listaClass {
+    margin-top: 20px; 
+}
+
+.listaClass ul {
+    margin-top: 15px;
+}
+
+.listaClass ul:last-child {
+    margin-bottom: 0; 
+}
+
+
+@media (max-width: 868px) {
+    .listaClassificacao {
+        flex-direction: column;
+        min-width: 0;
+        
+    }
+
+    .listaEquipes{
+        max-width: 100vw;
+    }
+
+    .listaClassificacao ul {
+        flex: 1 1 100%;
+    }
 }

@@ -7,7 +7,7 @@ const Estatisticas = () => {
     <div className="estatistica">
       <Corrida />
       
-      <h1>Estatísticas</h1>
+      <h1>Estatísticas da Corrida!</h1>
       <div className='tabela'>
         <ClassPilotos />
         
