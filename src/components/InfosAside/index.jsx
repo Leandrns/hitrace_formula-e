@@ -8,7 +8,12 @@ const InfosAside = () => {
     <div className="infos-aside">
       <div className="score-header">
         <Creditos />
-        <Pontuacao />
+        <Pontuacao
+                pontuacaoWehrlein={0}
+                pontuacaoEvans={0}
+                pontuacaoMahindra={0}
+                pontuacaoMahindraBio={0}
+            />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Chat } from "../Chat"
 import { JoinChat } from "../JoinChat"
 import './style.css'
-import corridaImg from '../../images/corrida.png'
+import corridaGif from '../../images/gif_transmissao.gif'
 
 export const AoVivo = () => {
     const [socket, setSocket] = useState(null)
@@ -15,8 +15,8 @@ export const AoVivo = () => {
                 ?
                 <div className="video-chat">
                     <div className="transmissao">
-                        <div className="title"><h2>Transmissão Ao Vivo</h2><i class="fa-solid fa-microphone-lines"></i></div>
-                        <img src={corridaImg} alt="" />
+                        <div className="title"><h2>Transmissão Ao Vivo</h2><i class="fa-solid fa-circle"></i></div>
+                        <img src={corridaGif} alt="" />
                     </div>
                     <Chat socket={socket} /> 
                 </div>
