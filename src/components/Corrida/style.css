@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
 }
 
 .dadosCorrida{
@@ -40,4 +39,10 @@
 .dadosCorrida p:last-of-type {
     font-weight: bold; 
     color: #0E29B4; 
+}
+
+@media screen and (max-width: 892px) {
+    .corrida .mapa img {
+        width: 100%;
+    }
 }

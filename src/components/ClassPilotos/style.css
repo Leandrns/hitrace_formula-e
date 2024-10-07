@@ -3,6 +3,7 @@
     padding: 20px;
     border-radius: 10px;
     font-family: 'Arial', sans-serif;
+    width: 100%;
 }
 
 .classPilotos p {
@@ -15,6 +16,7 @@
 .classPilotos ul {
     list-style-type: none;
     padding: 0;
+    width: 100%;
 }
 
 .escolhasUser {
