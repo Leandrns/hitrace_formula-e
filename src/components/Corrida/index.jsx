@@ -8,21 +8,24 @@ export const Corrida = () => {
         const intervalo = setInterval(() => {
             setVoltas(prevVoltas => {
                 if (prevVoltas < 37) {
-                    return prevVoltas + 1; // Incrementa o número de voltas
+                    return prevVoltas + 1; 
                 } else {
-                    clearInterval(intervalo); // Para o contador ao atingir 37 voltas
-                    return prevVoltas; // Retorna o número final de voltas
+                    clearInterval(intervalo); 
+                    return prevVoltas; 
                 }
             });
-        }, 800); // 800ms para contar até 37 em 30 segundos
+        }, 800); 
 
         return () => {
-            clearInterval(intervalo); // Limpa o intervalo ao desmontar o componente
+            clearInterval(intervalo); 
         };
     }, []);
 
     return (
         <div className='corrida'>
+            <div className='mapa'>
+                <img src='./stop_normal.gif'/>
+            </div>
             <div className="dadosCorrida">
                 <h2>E-prix de Londres</h2>
                 <p>20 de Julho de 2024</p>

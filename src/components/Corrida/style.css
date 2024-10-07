@@ -10,6 +10,11 @@
 }
 
 
+.mapa img{
+    border: solid #0E29B4 5px;
+    border-radius: 10px;
+}
+
 .dadosCorrida {
     background-color: #f2f2f2; 
     padding: 10px;
