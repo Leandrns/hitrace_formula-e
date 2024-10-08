@@ -9,7 +9,7 @@ export const JoinChat = ({ setChatVisibility, setSocket }) => {
   const handleSubmit = async () => {
     const username = usernameRef.current.value
     if(!username.trim()) return
-    const socket = await io.connect('http://localhost:3001')
+    const socket = await io.connect('https://server-hitrace.onrender.com')
     socket.emit('set_username', username)
     setSocket(socket)
     setChatVisibility(true)
