@@ -1,13 +1,14 @@
 .cabecalho {
-    display: block; 
+    display: flex; 
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
     text-align: center; 
     font-family: 'michroma';
+    height: 100%;
     opacity: 0;
     transition: opacity 1s ease-in;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body.loaded .cabecalho {
@@ -20,7 +21,7 @@ body.loaded .cabecalho {
 }
 
 .logo {
-    width: 10em;
+    width: 8em;
     font-size: 13px;
 }
 
