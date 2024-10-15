@@ -1,17 +1,21 @@
 .detalhes-escolha {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     height: 40px;
-    
     margin-top: auto;
-    
 }
 
 .preco, .desempenho {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.fa-star {
+    margin-bottom: 5px;
+    color: rgb(209, 209, 0);
 }

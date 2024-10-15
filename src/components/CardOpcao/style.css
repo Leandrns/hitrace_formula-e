@@ -4,6 +4,8 @@
     background-color: #D9D9D9;
     padding: 10px 20px 0 20px; 
     margin: 5px;
+    min-height: min-content;
+    max-height: max-content;
     border-radius: 10px;
     align-items: center;
     width: 100%; 
@@ -12,17 +14,33 @@
 }
 
 .card-opcao img {
-    width: auto;
-    height: 80px; 
+    max-height: 80px;
+    max-width: 150px;
+}
+
+.card-opcao p, .card-opcao h2 {
+    text-align: center;
 }
 
 .card-opcao:hover{
     background-color: rgba(0, 102, 255, 0.507);
 }
 
+.dados {
+    display: flex;
+    gap: 24px;
+}
+
+@media (max-width: 480px) {
+    .card-opcao {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+}
+
 @media (max-width: 620px) {
     .card-opcao p, .card-opcao h2 {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 

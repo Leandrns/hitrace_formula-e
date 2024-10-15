@@ -14,8 +14,11 @@ export const CardOpcao = ({tipo, id, nome, equipe, imgSrc, preco, desempenho, on
                 <h2>{nome}</h2>
                 <p>{equipe}</p>
             </div>
-            <p className='desempenho'><i className="bi bi-star"></i> {desempenho}</p>
-            <h2 className='preco'>{preco}</h2>
+            <div className="dados">
+                <p className='desempenho'><i class="fa-solid fa-star"></i> {desempenho}</p>
+                <h2 className='preco'><i className="bi bi-coin"></i>{preco}</h2>
+            </div>
+            
         </div>
     )
 }

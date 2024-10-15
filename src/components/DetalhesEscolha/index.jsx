@@ -5,11 +5,11 @@ export const DetalhesEscolha = (props) => {
         <div className='detalhes-escolha'>
             <div className="preco">
                 <i className="bi bi-coin"></i>
-                <p className='preco'>{props.preco}</p>
+                <p>{props.preco}</p>
             </div>
             <div className="desempenho">
-                <i className="bi bi-star"></i>
-                <p className='desempenho'>{props.desempenho}</p>
+                <i class="fa-solid fa-star"></i>
+                <p>{props.desempenho}</p>
             </div>
         </div>
         

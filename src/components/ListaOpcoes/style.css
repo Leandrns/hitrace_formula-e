@@ -30,19 +30,8 @@
     border: none;
 }
 
-.lista-opcoes img {
-    width: 100px; 
-    height: 100px; 
-}
-
 .tela-principal::after{
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-.lista-opcoes p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .creditos{
@@ -51,8 +40,6 @@
     justify-content: flex-end!important;
     margin-right: 10px; 
 }
-
-
 
 .bi-x{
     color: #0E29B4;
@@ -91,11 +78,6 @@
         max-height: 70%;
         right: 50%;
     }
-
-    .lista-opcoes img {
-        width: 80px;
-        height: 80px;
-    }
 }
 
 @media (max-width: 620px) {
@@ -108,11 +90,7 @@
 @media (max-width: 480px) {
     .lista-opcoes {
         max-height: 80%;
-    }
-
-    .lista-opcoes img {
-        width: 60px;
-        height: 60px;
+        width: 70%;
     }
 
     .bi-x {
