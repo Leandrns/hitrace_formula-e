@@ -3,6 +3,7 @@ import './style.css';
 
 const NavButtons = ( {telaAtiva, setTelaAtual} ) => {
     const buttons = [
+        { text: 'HitRace PRO', id: 'tela0'},
         { text: 'Escale sua equipe', id: 'tela1' },
         { text: 'Estatísticas', id: 'tela2' }, 
         { text: 'Conversas', id: 'tela3' }, 

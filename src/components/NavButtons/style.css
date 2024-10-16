@@ -5,15 +5,16 @@
   border: none; 
   border-radius: 7px; 
   cursor: pointer; 
-  transition: background-color 0.3s; 
+  transition: all 0.3s; 
   display: block;
   margin-bottom: 6px;
   width: 100%;
   font-family: "Mina";
   font-size: 16px;
+  position: relative; /* Necessário para z-index */
 }
 
-.nav-buttons{
+.nav-buttons {
   width: 95%;
 }
 
@@ -26,3 +27,29 @@
   box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.733);
 }
 
+.nav-button:first-child{
+  background-color: #ebc417;
+  
+}
+
+@keyframes backgroundChange {
+  0% {
+    background-color: #ebc417; /* Cor original */
+    opacity: 0.3;
+  }
+  50%{
+    opacity: 0.6;
+    
+  }
+  100% {
+    
+    opacity: 1;
+  }
+}
+
+.nav-button:first-child:hover {
+  background-image: url(../../images/gold.gif); /* Nova imagem de fundo */
+    background-size: cover; /* Ajusta o tamanho da imagem */
+  color: white;
+  animation: backgroundChange 0.3s forwards; /* Executa a animação ao passar o mouse */
+}

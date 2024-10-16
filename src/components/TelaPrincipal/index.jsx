@@ -10,6 +10,7 @@ import { PaginaInicial } from '../PaginaInicial/index.jsx'
 import Estatisticas from '../Estatisticas/index.jsx'
 import { Ranking } from '../Ranking/index.jsx'
 import dados from '../../json/dados.json'
+import { PRO } from '../Pro/index.jsx'
 
 
 export const TelaPrincipal = ({ telaAtiva }) => {
@@ -97,6 +98,12 @@ export const TelaPrincipal = ({ telaAtiva }) => {
     }
 
     switch(telaAtiva) {
+        case 'tela0':
+            return (
+                <div className='tela-principal premium'>
+                    <PRO />
+                </div>
+            )
         case 'tela1':
             return (
                 <div className='tela-principal escalacao'>
