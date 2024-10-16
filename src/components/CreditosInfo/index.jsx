@@ -1,12 +1,15 @@
-import './style.css'
+import React, { useContext } from 'react';
+import { UserContext } from '../../context/UserContext';
 
-const Creditos = () => {
+const CreditosInfo = () => {
+    const { creditos } = useContext(UserContext); 
+
     return (
-      <div className="score-item">
-        <h4>Créditos</h4>
-        <p>100</p>
-      </div>
+        <div className="score-item">
+          <h4>Créditos</h4>
+          <p>{creditos}</p>
+        </div>
     );
-  };
-  
-  export default Creditos;
+};
+
+export default CreditosInfo;

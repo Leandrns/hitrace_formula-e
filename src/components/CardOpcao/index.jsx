@@ -1,12 +1,13 @@
-import './style.css'
+import './style.css';
 
-export const CardOpcao = ({tipo, id, nome, equipe, imgSrc, preco, desempenho, onClose}) => {
+export const CardOpcao = ({ tipo, id, nome, equipe, imgSrc, preco, desempenho, onEscolher }) => {
     const adicionarAosEscolhidos = () => {
         let escolhido = [];
-        escolhido.push({id, nome, equipe, imgSrc, preco, desempenho});
-        localStorage.setItem(tipo, JSON.stringify(escolhido))
-        onClose()
-    }
+        escolhido.push({ id, nome, equipe, imgSrc, preco, desempenho });
+        localStorage.setItem(tipo, JSON.stringify(escolhido));
+        onEscolher(); 
+    };
+
     return (
         <div className='card-opcao' onClick={adicionarAosEscolhidos}>
             <img src={imgSrc} alt={nome} />
@@ -17,5 +18,5 @@ export const CardOpcao = ({tipo, id, nome, equipe, imgSrc, preco, desempenho, on
             <p className='desempenho'><i className="bi bi-star"></i> {desempenho}</p>
             <h2 className='preco'>{preco}</h2>
         </div>
-    )
-}
+    );
+};

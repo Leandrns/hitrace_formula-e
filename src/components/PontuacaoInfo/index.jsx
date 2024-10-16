@@ -10,4 +10,4 @@ const Pontuacao = ({ pontuacaoWehrlein, pontuacaoEvans, pontuacaoMahindra, pontu
     );
 };
 
-export default Pontuacao; // Certifique-se de que o componente está sendo exportado corretamente
+export default Pontuacao;
