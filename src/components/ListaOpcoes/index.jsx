@@ -5,7 +5,8 @@ import { UserContext } from '../../context/UserContext';
 
 export const ListaOpcoes = ({ opcoes, titulo, onClose }) => {
     const { descontarCreditos } = useContext(UserContext);
-
+    const {creditos} = useContext(UserContext);
+    // const opcoesFiltro = opcoes.filter(opcao => opcao.preco <=creditos)
     const escolherOpcao = (opcao) => {
         descontarCreditos(opcao.preco, opcao.tipo); 
         onClose(); 
@@ -31,6 +32,7 @@ export const ListaOpcoes = ({ opcoes, titulo, onClose }) => {
                         preco={opcao.preco}
                         desempenho={opcao.desempenho}
                         onEscolher={() => escolherOpcao(opcao)} 
+                        creditos={creditos}
                     />
                 ))}
             </div>

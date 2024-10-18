@@ -141,7 +141,7 @@ export const ClassPilotos = () => {
         });
     };
     
-
+    
     const [pontuacoesTecnicos, setPontuacoesTecnicos] = useState([]);
 
     useEffect(() => {

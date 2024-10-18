@@ -20,6 +20,11 @@
     background-color: rgba(0, 102, 255, 0.507);
 }
 
+.card-opcao.indisponivel {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
 @media (max-width: 620px) {
     .card-opcao p, .card-opcao h2 {
         font-size: 14px;
