@@ -9,7 +9,7 @@
     overflow: hidden; /* Para garantir que os bordas arredondadas funcionem */
 }
 
-.rank {
+.rankHR {
     display: flex;
     justify-content: center;
     padding: 10px;

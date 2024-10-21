@@ -23,7 +23,7 @@ export const Ranking = (props) => {
             <section className="titulo_pontuacao">
                 <h2>Ranking Brasil</h2> <img src="https://em-content.zobj.net/source/toss-face/381/flag-brazil_1f1e7-1f1f7.png" alt="Bandeira" className="bandeira" />
             </section>
-            <div className="rank">
+            <div className="rankHR">
                 <table className="borda">
                     <thead>
                         <tr>

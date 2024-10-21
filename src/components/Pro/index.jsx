@@ -1,13 +1,26 @@
 import styled from "styled-components"
 import pro from '../../images/pro.svg'
 import pro_branco from '../../images/pro_branco.svg'
-
+import bot from '../../images/bot_card.png'
+import estatistica from '../../images/estat_card.png'
+import upgrade from '../../images/upgrade_card.png'
+import ads from '../../images/ads_card.png'
+import live from '../../images/live_card.png'
+import rank from '../../images/rank_card.png'
 
 export const PaginaPro = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h1{
+        font-family: 'Michroma';
+        padding: 70px 10px 30px 10px;
+        color: #ebc417;
+        font-size: 50px;
+        text-align: center;
+    }
 `
 
 export const Titulo = styled.div`
@@ -103,16 +116,17 @@ export const Opcoes = styled.section`
         width: 100%;
         height: 50px;
         margin-left: 13px;
-        margin-bottom: 4px;
     }
 
     h3{
         font-family: 'Michroma';
         font-size: 28px;
+        padding-bottom: 17px;
     }
 
     h4{
         font-size: 23px;
+        padding-bottom: 4px;
     }
     
     i{
@@ -123,7 +137,7 @@ export const Opcoes = styled.section`
         font-family: 'Mina';
         display: flex;
         align-items: center;
-        padding-bottom: 15px;
+        padding-bottom: 12px;
     }
     button{
     position: absolute;
@@ -167,8 +181,41 @@ export const Opcoes = styled.section`
 export const CardsPro = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+    
+    
+    img{
+        padding: 10px 0;
+    }
+
+    div.cartao{
+        background-color: #CFCFCF;
+        height: 400px;
+        width: 300px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        
+        &:hover{
+            box-shadow: 0px 0px 20px #636363;
+            scale: 1.1;
+        }
+    }
+
+    div.textos{
+        color: white;
+        text-align: center;
+    }
+
+    div.textos h5{
+        font-size: 28px;
+    }
+
+    div.textos p{
+        font-size: 20px;
+        padding: 0 10px;
+    }
 `
 
 
@@ -180,64 +227,91 @@ export const PRO = (props) => {
                 <Planos>
                     <Opcoes botao='linear-gradient(135deg, #46DEFF, #2d8ea3);' btnhover='linear-gradient(135deg, #2d8ea3, #46DEFF);' >
                         <img src={pro_branco} alt="HitRace PRO"/>
-                        <h3>O BÁSICO</h3><br />
+                        <h3>O BÁSICO</h3>
                         <h4>R$ 8,90 / mês</h4>
+                        <p>(Aplicável a somente uma modalidade)</p>
                         <p>
                         <i class="bi bi-check2"></i>
-                        Mais de
+                        Acesso ao bot
                         </p>
                         <p>
                         <i class="bi bi-check2"></i>
-                        Mais de
+                        Estatísticas exclusivas durante as corridas
                         </p>
                         <p>
                         <i class="bi bi-check2"></i>
-                        Mais de
+                        Ganhe upgrades semanalmente
                         </p>
                         <p>
                         <i class="bi bi-check2"></i>
-                        Mais de
+                        Jogue sem anúncios
                         </p>
                         <button >ASSINAR</button>
                     </Opcoes>
                     <Opcoes fundo='linear-gradient(135deg, #ebc417, #000);'>
                         <img src={pro_branco} alt="HitRace PRO"/>
-                        <h3>TODAS AS VANTAGENS</h3><br />
+                        <h3>TODAS AS VANTAGENS</h3>
                         <h4>R$ 24,99 / mês</h4>
+                        <p>Tudo que está incluso no Básico, além de</p>
                         <p>
                         <i class="bi bi-check2"></i>
-                        Mais de
+                        Bot e estatísticas para TODAS as modalidades
                         </p>
                         <p>
                         <i class="bi bi-check2"></i>
-                        Mais de
+                        Transmissão ao vivo das corridas
                         </p>
                         <p>
                         <i class="bi bi-check2"></i>
-                        Mais de
-                        </p>
-                        <p>
-                        <i class="bi bi-check2"></i>
-                        Mais de
-                        </p>
-                        <p>
-                        <i class="bi bi-check2"></i>
-                        Mais de
-                        </p>
-                        <p>
-                        <i class="bi bi-check2"></i>
-                        Mais de
+                        Tenha a chance de receber prêmios exclusivos de acordo com sua colocação no ranking
                         </p>
                         <button>ASSINAR</button>
                     </Opcoes>
                 </Planos>
+                <h1>Vantagens PRO favoritas</h1>
                 <CardsPro>
-                    {/* <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="..."/>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div> */}
+                    <div className="cartao">
+                        <img src={bot} alt="Bot HitRace" />
+                        <div className="textos">
+                            <h5>Use o Bot</h5>
+                            <p>O nosso bot ajuda a você tomar as melhores decisões dentro do HitRace!</p>
+                        </div>
+                    </div>
+                    <div className="cartao">
+                        <img src={estatistica} alt="Bônus Estatistica" />
+                        <div className="textos">
+                            <h5>Estatísticas Exclusivas</h5>
+                            <p>Acesso a novas estatísticas que ajudam a melhorar suas escolhas.</p>
+                        </div>
+                    </div>
+                    <div className="cartao">
+                        <img src={upgrade} alt="Upgrade Semanal" />
+                        <div className="textos">
+                            <h5>Upgrade Semanal</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div className="cartao">
+                        <img src={ads} alt="Sem Anúncios" />
+                        <div className="textos">
+                            <h5>Nada de Anúncios</h5>
+                            <p>Se livre dos anúncios do nosso jogo.</p>
+                        </div>
+                    </div>
+                    <div className="cartao">
+                        <img src={live} alt="Bot HitRace" />
+                        <div className="textos">
+                            <h5>Assista AO VIVO</h5>
+                            <p>Assista a as corridas enquanto monta sua equipe para a próxima corrida.</p>
+                        </div>
+                    </div>
+                    <div className="cartao">
+                        <img src={rank} alt="Bot HitRace" />
+                        <div className="textos">
+                            <h5>Ganhe Prêmios</h5>
+                            <p>Jogue e fique entre os melhores para receber recompensas!</p>
+                        </div>
+                    </div>
                 </CardsPro>
         </PaginaPro>
     )

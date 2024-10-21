@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="container">
+      <div className="containerHR">
         <Aside telaAtiva={telaAtual} setTelaAtual={setTelaAtual} />
         <TelaPrincipal telaAtiva={telaAtual} />
       </div>
