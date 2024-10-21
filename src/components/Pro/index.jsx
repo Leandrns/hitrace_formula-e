@@ -288,7 +288,7 @@ export const PRO = (props) => {
                         <img src={upgrade} alt="Upgrade Semanal" />
                         <div className="textos">
                             <h5>Upgrade Semanal</h5>
-                            <p></p>
+                            <p>Token de 2x pontos, e outros disponíveis.</p>
                         </div>
                     </div>
                     <div className="cartao">
