@@ -8,6 +8,7 @@ import ads from '../../images/ads_card.png'
 import live from '../../images/live_card.png'
 import rank from '../../images/rank_card.png'
 import basic from '../../images/pro_basic.svg'
+import celular from '../../images/proCelular.svg'
 
 export const PaginaPro = styled.div`
     display: flex;
@@ -22,6 +23,12 @@ export const PaginaPro = styled.div`
         font-size: 50px;
         text-align: center;
     }
+    /* @media screen and (max-width: 449px) {
+        h1{
+            font-size: 100px;
+        }
+        
+    } */
 `
 
 export const Titulo = styled.div`
@@ -85,7 +92,7 @@ position: relative;
     }
 
     @media (max-width: 500px){
-        background-image: url(${() => require('../../images/proCelular.png')});
+        background-image: url(${celular});
         button{
             margin-bottom: 60px;
         }
