@@ -1,5 +1,4 @@
 import './style.css';
-
 export const CardOpcao = ({ tipo, id, nome, equipe, imgSrc, preco, desempenho, onEscolher, creditos }) => {
     const outros = creditos >=preco;
     const adicionarAosEscolhidos = () => {
@@ -9,9 +8,6 @@ export const CardOpcao = ({ tipo, id, nome, equipe, imgSrc, preco, desempenho, o
             localStorage.setItem(tipo, JSON.stringify(escolhido));
             onEscolher(); 
         }
-
-        
-        
 }
 
     return (

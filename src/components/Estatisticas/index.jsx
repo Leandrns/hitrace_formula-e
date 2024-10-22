@@ -1,5 +1,8 @@
 import { Corrida } from "../Corrida";
 import { ClassPilotos } from "../ClassPilotos";
+import { EstatisticasPro } from "../EstatisticasPro";
+import { EstatisticasPerfil } from "../EstatisticasPerfil";
+import { UserChoicesProvider } from '../../context/UserChoicesContext';
 import './style.css'
 
 const Estatisticas = () => {
@@ -9,10 +12,14 @@ const Estatisticas = () => {
       
       <h1>Estatísticas da Corrida!</h1>
       <div className='tabela'>
+
+      <UserChoicesProvider>
         <ClassPilotos />
-        
-      </div>
+      </ UserChoicesProvider> 
       
+      </div>
+      <EstatisticasPerfil />
+      <EstatisticasPro />
     </div>
   )
 }

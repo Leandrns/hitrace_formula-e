@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react'; 
+import { UserChoicesContext } from '../../context/UserChoicesContext';
 import './style.css';
 
 const pilotos = [
@@ -43,32 +44,25 @@ const tecnico = [
     { nome: 'Tommaso Volpe', componentes: ['Nissan', 'Nissan e-4ORCE'] },
 ];
 
+export const ClassPilotos = ({ piloto1Nome, piloto2Nome, tecnicoNome, equipeNome, motorNome }) => {
 
-export const ClassPilotos = () => {
+    const { piloto1, piloto2, equipe, motor, chefe, pontuacaoPiloto1, pontuacaoPiloto2, pontuacaoEquipe, pontuacaoMotor, pontuacaoChefe } = useContext(UserChoicesContext);
+    const totalPontuacao = pontuacaoPiloto1 + pontuacaoPiloto2 + pontuacaoEquipe + pontuacaoMotor + pontuacaoChefe;
+
     const [baterias, setBaterias] = useState(pilotos.map(p => ({ ...p, bateria: 100 })));
     const [posicoes, setPosicoes] = useState(pilotos.map((p, index) => ({ ...p, posicao: index + 1 })));
     const [pontuacoes, setPontuacoes] = useState(Array(pilotos.length).fill(0));
     const [corridaAtiva, setCorridaAtiva] = useState(true);
-
-    // const reiniciarCorrida = () => {
-    //     setBaterias(pilotos.map(p => ({ ...p, bateria: 100 })));
-    //     setPosicoes(pilotos.map((p, index) => ({ ...p, posicao: index + 1 })));
-    //     setPontuacoes(Array(pilotos.length).fill(0));
-    //     setCorridaAtiva(true);
-    // };
+    
 
     useEffect(() => {
         const interval = setInterval(() => {
             if (!corridaAtiva) return;
 
-            setBaterias(prevBaterias => {
-                return prevBaterias.map(p => {
-                    if (p.bateria > 0) {
-                        return { ...p, bateria: Math.max(p.bateria - (100 / (30 * (1000 / 500))), 4) };
-                    }
-                    return p;
-                });
-            });
+            setBaterias(prevBaterias => prevBaterias.map(p => ({
+                ...p,
+                bateria: Math.max(p.bateria - (100 / (30 * (1000 / 500))), 4)
+            })));
 
             setPosicoes(prevPosicoes => {
                 const novasPosicoes = [...prevPosicoes];
@@ -89,26 +83,21 @@ export const ClassPilotos = () => {
             clearTimeout(timeout);
         };
     }, [corridaAtiva]);
-
+    
     useEffect(() => {
-        const novasPontuacoes = posicoes.map((piloto, index) => {
+        setPontuacoes(posicoes.map((piloto, index) => {
             const posicao = piloto.posicao - 1;
             return pontuacaoPorPosicao[posicao] || 0;
-        });
-        setPontuacoes(novasPontuacoes);
+        }));
     }, [posicoes]);
 
-    const getPontuacaoPorNome = (nome) => {
-        const index = posicoes.findIndex(p => p.nome === nome);
-        return index !== -1 ? pontuacoes[index] : 0;
+    const calcularPontuacaoTotal = () => {
+        return pontuacaoPiloto1 + pontuacaoPiloto2 + pontuacaoEquipe + pontuacaoMotor + pontuacaoChefe;
     };
 
-    // Calcular pontuação total das equipes
     const calcularPontuacaoEquipes = () => {
         return equipes.map(equipe => {
-            const pontuacaoTotal = equipe.pilotos.reduce((total, pilotoNome) => {
-                return total + getPontuacaoPorNome(pilotoNome);
-            }, 0);
+            const pontuacaoTotal = equipe.pilotos.reduce((total, pilotoNome) => total + getPontuacaoPorNome(pilotoNome), 0);
             return { nome: equipe.nome, pontuacao: pontuacaoTotal };
         });
     };
@@ -117,12 +106,7 @@ export const ClassPilotos = () => {
         return motores.map(motor => {
             const pontuacaoTotal = motor.equipes.reduce((total, equipeNome) => {
                 const equipe = equipes.find(equipe => equipe.nome === equipeNome);
-                if (equipe) {
-                    return total + equipe.pilotos.reduce((acc, pilotoNome) => {
-                        return acc + getPontuacaoPorNome(pilotoNome);
-                    }, 0);
-                }
-                return total;
+                return total + (equipe ? equipe.pilotos.reduce((acc, pilotoNome) => acc + getPontuacaoPorNome(pilotoNome), 0) : 0);
             }, 0);
             return { nome: motor.nome, pontuacao: pontuacaoTotal };
         });
@@ -131,45 +115,32 @@ export const ClassPilotos = () => {
     const calcularPontuacaoTecnicos = () => {
         return tecnico.map(tecnico => {
             const pontuacaoEquipe = equipes.reduce((total, equipe) => {
-                if (equipe.pilotos && tecnico.componentes.includes(equipe.nome)) {
-                    return total + calcularPontuacaoEquipes().find(e => e.nome === equipe.nome)?.pontuacao || 0;
-                }
-                return total;
+                return total + (tecnico.componentes.includes(equipe.nome) ? calcularPontuacaoEquipes().find(e => e.nome === equipe.nome)?.pontuacao || 0 : 0);
             }, 0);
-    
             return { nome: tecnico.nome, pontuacao: pontuacaoEquipe / 3 }; // Divisão para ajustar a pontuação
         });
     };
-    
-    
-    const [pontuacoesTecnicos, setPontuacoesTecnicos] = useState([]);
 
-    useEffect(() => {
-        setPontuacoesTecnicos(calcularPontuacaoTecnicos());
-    }, [equipes, posicoes]);
+    const getPontuacaoPorNome = (nome) => {
+        const index = posicoes.findIndex(p => p.nome === nome);
+        return index !== -1 ? pontuacoes[index] : 0;
+    };
 
     const pontuacoesEquipes = calcularPontuacaoEquipes();
-    console.log("Pontuações das equipes:", pontuacoesEquipes); // Log para depuração
     const pontuacoesMotores = calcularPontuacaoMotores();
-    console.log("Pontuações das equipes:", pontuacoesMotores); // Log para depuração
-    const pontuacaoWehrlein = getPontuacaoPorNome('Wehrlein');
-    const pontuacaoEvans = getPontuacaoPorNome('Evans');
-    const pontuacaoMahindraEquipe = pontuacoesEquipes.find(equipe => equipe.nome === 'Mahindra')?.pontuacao || 0;
-    const pontuacaoMahindraM9 = pontuacoesMotores.find(motor => motor.nome === 'Mahindra M9')?.pontuacao || 0;
+    const pontuacoesTecnicos = calcularPontuacaoTecnicos();
 
-    const pontuacaoFrederic = pontuacoesTecnicos.find(tecnico => tecnico.nome === 'Frederic Bertrand')?.pontuacao || 0;
-    const totalPontuacao = pontuacaoWehrlein + pontuacaoEvans + pontuacaoMahindraEquipe + pontuacaoMahindraM9 + pontuacaoFrederic;
     return (
         <div className='classPilotos'>
             <div className='escolhasUser'>
-                <p>Pontuação Total: {totalPontuacao.toFixed(2)}</p>
-                <ul>
-                    <li>PILOTO1 - Wehrlein = {pontuacaoWehrlein}</li>
-                    <li>PILOTO2 - Evans = {pontuacaoEvans}</li>
-                    <li>EQUIPE - Mahindra = {pontuacaoMahindraEquipe}</li>
-                    <li>MOTOR - Mahindra M9 = {pontuacaoMahindraM9}</li>
-                    <li>CHEFE DE EQUIPE - Frederic Bertrand = {pontuacaoFrederic.toFixed(2)}</li> 
-                </ul>
+            <p>Pontuação Total: {calcularPontuacaoTotal()}</p>
+            <ul>
+                <li>PILOTO 1 - {piloto1 ? piloto1.nome : 'Não selecionado'} = {pontuacaoPiloto1}</li>
+                <li>PILOTO 2 - {piloto2 ? piloto2.nome : 'Não selecionado'} = {pontuacaoPiloto2}</li>
+                <li>EQUIPE - {equipe ? equipe.nome : 'Não selecionada'} = {pontuacaoEquipe}</li>
+                <li>MOTOR - {motor ? motor.nome : 'Não selecionado'} = {pontuacaoMotor}</li>
+                <li>CHEFE DE EQUIPE - {chefe ? chefe.nome : 'Não selecionado'} = {pontuacaoChefe.toFixed(2)}</li>
+            </ul>
             </div>
 
             <div className="listaClassificacao">
@@ -204,7 +175,7 @@ export const ClassPilotos = () => {
                     ))}
                 </ul>
                 <ul>
-                    <h2>Pontuação dos Chefes de Equipe</h2>
+                    <h2>Pontuação dos Chefes</h2>
                     {pontuacoesTecnicos.map(tecnico => (
                         <li key={tecnico.nome} className="piloto-item">
                             {tecnico.nome}: {tecnico.pontuacao.toFixed(2)} pontos

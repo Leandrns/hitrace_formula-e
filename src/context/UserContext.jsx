@@ -7,7 +7,7 @@ export const UserProvider = ({ children }) => {
   const storageCreditos = localStorage.getItem('creditos');
   const storageEscolhas = localStorage.getItem('escolhas');
 
-  const [creditos, setCreditos] = useState(storageCreditos ? Number(storageCreditos) : 50);
+  const [creditos, setCreditos] = useState(storageCreditos ? Number(storageCreditos) : 80);
   const [escolhas, setEscolhas] = useState(storageEscolhas ? JSON.parse(storageEscolhas) : {
     piloto: null,
     equipe: null,

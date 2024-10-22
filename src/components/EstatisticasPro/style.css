@@ -1,0 +1,9 @@
+.modoPro h2, h3{
+    text-align: center;
+    gap: 10px;
+}
+
+.modoPro h2{
+    font-family: 'michroma';
+    font-size: 36px;
+}
