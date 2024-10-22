@@ -1,0 +1,50 @@
+.Escalados{
+    background-color: #ccc;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Escalados h3{
+    text-align: center;
+}
+
+.plts, .chfs, .eqp, .mtor {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.persona, .personaEquipe{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: solid black 2px;
+    margin: 10px;
+    min-height: 100px;
+    border-radius: 10px;
+    background-color: #f6f6f6;
+}
+
+.persona, .personaEquipe h5{
+    font-size: 24px;
+}
+
+.persona img{
+    width: 120px;
+    height: 100px;
+    padding: 0px 10px;
+    max-height: 95px;
+}
+
+.personaEquipe img{
+    width: 210px;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .plts, .chfs, .eqp, .mtor {
+        width: 100%;
+    }
+}
