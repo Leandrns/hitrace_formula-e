@@ -7,7 +7,7 @@ import upgrade from '../../images/upgrade_card.png'
 import ads from '../../images/ads_card.png'
 import live from '../../images/live_card.png'
 import rank from '../../images/rank_card.png'
-import basic from '../../images/pro_basic.svg'
+import tabela from '../../images/hit_celular.svg'
 import celular from '../../images/proCelular.svg'
 
 export const PaginaPro = styled.div`
@@ -23,12 +23,12 @@ export const PaginaPro = styled.div`
         font-size: 50px;
         text-align: center;
     }
-    /* @media screen and (max-width: 449px) {
+    @media screen and (max-width: 735px) {
         h1{
-            font-size: 100px;
+            font-size: 6vw;
         }
         
-    } */
+    }
 `
 
 export const Titulo = styled.div`
@@ -240,22 +240,27 @@ export const Comparacao = styled.table`
     width: 900px;
 
 
-    img{
-        width: 300px;
-        height: 50px;
-    }
-    img.basic{
-        margin-top: 12px;
-    }
-    img.imp{
+    div{
         position: relative;
-        top: -17px;
+        width: 100%;
+        height: 50px;
+        background-image: url(${pro_branco});
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
+    div.basic{
+        top: 8px;
+    }
+    div.imp{
+        top: -18px;
+    }
+    
     th{
         border: 0;
         border-bottom: solid 2px #0000003b;
         padding: 10px 10px 0 10px;
-        
+        width: 33%;
     }
     td{
         border: 0;
@@ -291,17 +296,64 @@ export const Comparacao = styled.table`
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
     }
-    th.fl{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     h3.popular{
         position: relative;
         top: -24px;
+        left: 15%;
         background: linear-gradient(90deg, #ad8e00, #ebc417);
-        width: 160px;
+        width: 70%;
         border-radius: 15px;
+    }
+    h3.basico{
+        position: relative;
+        top: -3px;
+        font-family: 'Michroma';
+        font-size: 15px;
+    }
+
+    @media (max-width: 1210px) {
+        width: 100%;
+        
+    }
+    @media (max-width: 803px) {
+        h3.popular{
+            font-size: 15px;
+        }
+        div.basic{
+        top: 9px;
+        }
+        div.imp{
+            top: -14px;
+        }
+        h3.basico{
+            top: -3px;
+        }
+    }
+    @media (max-width: 645px) {
+        div{
+            background-image: url(${tabela});
+            height: 180px;
+            background-size: 80%;
+        }
+        h3.popular{
+            width: 100%;
+            left: 0;
+            padding: 0 5px;
+        }
+        
+    }
+    @media (max-width: 527px) {
+        div.imp{
+            top: -28px;
+        }
+        div{
+            height: 140px;
+        }
+    }
+    @media (max-width: 486px) {
+        h3.basico{
+            font-size: 12px;
+        }
     }
 `
 
@@ -403,9 +455,9 @@ export const PRO = (props) => {
                 <h1>Escolha o plano mais adequado para você.</h1>
                 <Comparacao>
                     <thead>
-                        <th><h3>Preços e Funcionalidades</h3></th>
-                        <th><img src={basic} alt="Pro Basico" className="basic" /></th>
-                        <th className="fl"><h3 className="popular">MAIS POPULAR</h3><img className="imp" src={pro_branco} alt="Pro" /></th>
+                        <th><h3>Preços e Benefícios</h3></th>
+                        <th><div className="basic"> </div><h3 className="basico">BÁSICO</h3></th>
+                        <th><h3 className="popular">MAIS POPULAR</h3><div className="imp"> </div></th>
                     </thead>
                     <tbody>
                         <tr>
@@ -419,7 +471,7 @@ export const PRO = (props) => {
                             <td><h4><i class="fa-solid fa-check"></i></h4></td>
                         </tr>
                         <tr>
-                            <td>Transmissões Ao Vivo</td>
+                            <td>Corridas Ao Vivo</td>
                             <td><h4><i class="fa-solid fa-x negate"></i></h4></td>
                             <td><h4><i class="fa-solid fa-check"></i></h4></td>
                         </tr>
