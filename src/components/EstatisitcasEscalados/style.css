@@ -1,6 +1,7 @@
 .Escalados{
-    background-color: #ccc;
+    background: linear-gradient(rgb(190, 190, 255),rgb(228, 225, 225));
     margin-top: 20px;
+    border-radius: 20px;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +10,7 @@
 
 .Escalados h3{
     text-align: center;
+    color: #062135;
 }
 
 .plts, .chfs, .eqp, .mtor {
@@ -25,6 +27,7 @@
     min-height: 100px;
     border-radius: 10px;
     background-color: #f6f6f6;
+    box-shadow: 0 0 8px black;
 }
 
 .persona, .personaEquipe h5{

@@ -1,7 +1,7 @@
 .classPilotos {
-    background-color: #f8f9fa;
+    background: linear-gradient(rgb(190, 190, 255),rgb(228, 225, 225));
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     font-family: 'Arial', sans-serif;
     width: 100%;
 }
@@ -80,8 +80,8 @@
 
 .bateria-nivel {
     height: 10px;
-    
-    background: linear-gradient(to right,red, rgb(0, 150, 0));        background-size: auto;
+    background: linear-gradient(to right,red, rgb(0, 150, 0));        
+    background-size: auto;
     transition: width 0.1s ease;
 }
 
@@ -90,10 +90,10 @@
 }
 
 .classPilotos h2 {
-    font-size: 22px;
-    color: #2980b9;
+    font-size: 24px;
+    color: #104d75;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
     font-family: 'michroma';
 }
 

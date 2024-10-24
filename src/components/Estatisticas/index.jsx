@@ -4,8 +4,14 @@ import { EstatisticasPro } from "../EstatisticasPro";
 import { EstatisticasPerfil } from "../EstatisticasPerfil";
 import { UserChoicesProvider } from '../../context/UserChoicesContext';
 import './style.css'
+import React, {useState} from 'react'
 
 const Estatisticas = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+    const toggleVisibility = () => {
+        setIsVisible(!isVisible);
+      };
   return (
     <div className="estatistica">
       <Corrida />
@@ -19,7 +25,11 @@ const Estatisticas = () => {
       
       </div>
       <EstatisticasPerfil />
-      <EstatisticasPro />
+      <button onClick={toggleVisibility}>
+        {isVisible ? 'Esconder Dados PRO':'Ver Dados PRO'}
+      </button>
+      {isVisible && <EstatisticasPro />}
+      
     </div>
   )
 }
