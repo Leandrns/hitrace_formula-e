@@ -28,6 +28,27 @@
     align-items: center;
 }
 
+.botaoLimpa{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  
+}
+
+.botaoLimpa button{
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid blue 2px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: all ease .5s;
+}
+
+.botaoLimpa button:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
 @media screen and (max-width: 980px){
     .tela-principal {
         width: 100%;

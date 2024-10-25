@@ -2,7 +2,7 @@ import './style.css'
 import { InfosCorrida } from '../InfosCorrida'
 import { TimerMercado } from '../TimerMercado/index.jsx'
 import { Escolhas } from '../Escolhas/index.jsx'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { ListaOpcoes } from '../ListaOpcoes/index.jsx'
 import { AoVivo } from '../AoVivo/index.jsx';
 import { EntendaJogo } from '../EntendaJogo/index.jsx'
@@ -11,20 +11,43 @@ import Estatisticas from '../Estatisticas/index.jsx'
 import { Ranking } from '../Ranking/index.jsx'
 import dados from '../../json/dados.json'
 import { PRO } from '../Pro/index.jsx'
-
+import { UserContext } from '../../context/UserContext.jsx'
 
 export const TelaPrincipal = ({ telaAtiva }) => {
+    const { creditos, devolverCreditos } = useContext(UserContext);
+
     localStorage.setItem('pilotos1', JSON.stringify(dados.pilotos1));
     localStorage.setItem('pilotos2', JSON.stringify(dados.pilotos2));
     localStorage.setItem('tecnicos', JSON.stringify(dados.tecnicos));
     localStorage.setItem('equipes', JSON.stringify(dados.equipes));
     localStorage.setItem('motores', JSON.stringify(dados.motores));
 
-    let piloto1 = JSON.parse(localStorage.getItem('piloto1')) || false;
-    let piloto2 = JSON.parse(localStorage.getItem('piloto2')) || false;
-    let tecnico = JSON.parse(localStorage.getItem('tecnico')) || false;
-    let equipe = JSON.parse(localStorage.getItem('equipe')) || false;
-    let motor = JSON.parse(localStorage.getItem('motor')) || false;
+    const [piloto1, setPiloto1] = useState(JSON.parse(localStorage.getItem('piloto1')) || null);
+    const [piloto2, setPiloto2] = useState(JSON.parse(localStorage.getItem('piloto2')) || null);
+    const [tecnico, setChefe] = useState(JSON.parse(localStorage.getItem('tecnico')) || null);
+    const [equipe, setEquipe] = useState(JSON.parse(localStorage.getItem('equipe')) || null);
+    const [motor, setMotor] = useState(JSON.parse(localStorage.getItem('motor')) || null);
+
+    const resetEscolhas = () => {
+        
+        devolverCreditos();
+
+        // Limpa o localStorage
+        localStorage.removeItem('piloto1');
+        localStorage.removeItem('piloto2');
+        localStorage.removeItem('equipe');
+        localStorage.removeItem('motor');
+        localStorage.removeItem('tecnico');
+
+        // Reseta os estados das escolhas
+        setPiloto1(null);
+        setPiloto2(null);
+        setEquipe(null);
+        setMotor(null);
+        setChefe(null);
+
+        window.location.reload(); //refresh da pag pra atualizar
+    };
 
     let pilotos1Storage = JSON.parse(localStorage.getItem('pilotos1'));
     let pilotos2Storage = JSON.parse(localStorage.getItem('pilotos2'));
@@ -117,6 +140,9 @@ export const TelaPrincipal = ({ telaAtiva }) => {
                     <div className="box-infos">
                         <InfosCorrida />
                         <TimerMercado />
+                    </div>
+                    <div className='botaoLimpa'>
+                    <button onClick={resetEscolhas}>Limpar escolhas</button>
                     </div>
                     <Escolhas 
                         exibirListaPilotos1={renderizarListaPilotos1}
