@@ -1,7 +1,7 @@
 .classPilotos {
-    background-color: #f8f9fa;
+    background: linear-gradient(rgb(202, 202, 202),rgb(228, 225, 225));
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     font-family: 'Arial', sans-serif;
     width: 100%;
 }
@@ -21,12 +21,12 @@
 
 .escolhasUser {
     background-color: #ffffff;
-    padding: 20px; 
+    padding: 10px; 
     margin: 20px auto; 
-    text-align: center; 
+    text-align: start; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    max-width: 600px; 
+    max-width: 500px; 
     font-family: 'mina';
     
 }
@@ -39,7 +39,7 @@
 
 .escolhasUser li {
     margin: 10px 0; 
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
 }
 
@@ -47,9 +47,12 @@
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
-
+.piloto-item li{
+    font-size: 12px;
+}
 
 .piloto-item {
     background-color: #ffffff;
@@ -61,6 +64,13 @@
     align-items: center;
     font-family: 'mina';
     justify-content: space-between;
+    font-size: 14px;
+}
+
+.dados{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .piloto-item i {
@@ -71,17 +81,18 @@
 .bateria {
     background-color: #e0e0e0;
     border-radius: 4px;
-    width: 180px;
+    width: 120px;
     height: 10px;
-    
+    justify-content: end;
     position: relative;
     overflow: hidden;
+    
 }
 
 .bateria-nivel {
     height: 10px;
-    
-    background: linear-gradient(to right,red, rgb(0, 150, 0));        background-size: auto;
+    background: linear-gradient(to right,red, rgb(0, 150, 0));        
+    background-size: auto;
     transition: width 0.1s ease;
 }
 
@@ -90,10 +101,10 @@
 }
 
 .classPilotos h2 {
-    font-size: 22px;
-    color: #2980b9;
+    font-size: 24px;
+    color: #104d75;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
     font-family: 'michroma';
 }
 
@@ -151,4 +162,11 @@
     .listaClassificacao ul {
         flex: 1 1 100%;
     }
+}
+
+@media (max-width: 560px) {
+    .bateria, .piloto-item i{
+        display: none;
+    }
+
 }

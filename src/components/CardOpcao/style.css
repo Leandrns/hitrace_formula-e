@@ -31,12 +31,18 @@
     gap: 24px;
 }
 
+.card-opcao.indisponivel {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
 @media (max-width: 480px) {
     .card-opcao {
         flex-direction: column;
         padding-bottom: 10px;
     }
 }
+
 
 @media (max-width: 620px) {
     .card-opcao p, .card-opcao h2 {

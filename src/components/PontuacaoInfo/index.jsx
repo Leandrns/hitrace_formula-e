@@ -1,13 +1,22 @@
-import './style.css';
+// src/components/PontuacaoInfo.jsx
+import React, { useEffect, useState } from 'react';
 
-const Pontuacao = ({ pontuacaoWehrlein, pontuacaoEvans, pontuacaoMahindra, pontuacaoMahindraBio }) => {
-    return (
-      <div className="score-item">
-        <h4>Pontuação</h4>
-        <p>{pontuacaoWehrlein + pontuacaoEvans + pontuacaoMahindra + pontuacaoMahindraBio}</p>
-        <p></p>
-      </div>
-    );
+const PontuacaoInfo = () => {
+    const [pontuacaoTotal, setPontuacaoTotal] = useState(0);
+
+    useEffect(() => {
+        // Recuperar do localStorage
+        const storedPontuacaoTotal = localStorage.getItem('pontuacaoTotal');
+        if (storedPontuacaoTotal) {
+            setPontuacaoTotal(parseFloat(storedPontuacaoTotal));
+        }
+    }, []);
+    return(
+        <div className="score-item">
+            <h4>Pontuação</h4> 
+            <p>{pontuacaoTotal}</p>
+        </div>
+    )
 };
 
-export default Pontuacao; // Certifique-se de que o componente está sendo exportado corretamente
+export default PontuacaoInfo;

@@ -27,9 +27,9 @@ export const Corrida = () => {
                 <img src='./stop_normal.gif'/>
             </div>
             <div className="dadosCorrida">
-                <h2>E-prix de Londres</h2>
-                <p>20 de Julho de 2024</p>
-                <p>Etapa 16</p>
+                <h2>E-prix de São Paulo</h2>
+                <p>7 de Dezembro de 2024</p>
+                <p>Etapa 1</p>
                 <p>Voltas: {voltas}/37</p>
             </div>
         </div>

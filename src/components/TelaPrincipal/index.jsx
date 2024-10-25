@@ -36,6 +36,7 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         pilotos1Storage = pilotos1Storage.filter(piloto => piloto.id !== piloto1[0].id);
         pilotos2Storage = pilotos2Storage.filter(piloto => piloto.id !== piloto1[0].id);
     }
+    
     if(piloto2) {
         pilotos2Storage = pilotos2Storage.filter(piloto => piloto.id !== piloto2[0].id);
         pilotos1Storage = pilotos1Storage.filter(piloto => piloto.id !== piloto2[0].id);
@@ -49,6 +50,12 @@ export const TelaPrincipal = ({ telaAtiva }) => {
     if(motor) {
         motoresStorage = motoresStorage.filter(m => m.id !== motor[0].id);
     }
+
+    console.log(piloto1)
+    console.log(piloto2)
+    console.log(tecnico)
+    console.log(equipe)
+    console.log(motor)
 
     localStorage.setItem('pilotos1', JSON.stringify(pilotos1Storage))
     localStorage.setItem('pilotos2', JSON.stringify(pilotos2Storage))
@@ -148,10 +155,11 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         case 'tela2':
             return (
                 <div className="tela-principal estatisticas">
-                    <Estatisticas />
+                    
+                    <Estatisticas />   
+                                  
                 </div>
-            )
-
+              );
         case 'tela3':
             return (
                 <div className="tela-principal conversas">
