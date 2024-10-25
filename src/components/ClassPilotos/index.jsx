@@ -1,18 +1,26 @@
 import { useEffect, useState, useContext } from 'react'; 
-import { UserChoicesContext } from '../../context/UserChoicesContext';
 import './style.css';
 import corridaDados from '../../json/dados.json'
 
 export const ClassPilotos = () => {
-
-    const { piloto1, piloto2, equipe, motor, chefe, pontuacaoPiloto1, pontuacaoPiloto2, pontuacaoEquipe, pontuacaoMotor, pontuacaoChefe } = useContext(UserChoicesContext);
-    const totalPontuacao = pontuacaoPiloto1 + pontuacaoPiloto2 + pontuacaoEquipe + pontuacaoMotor + pontuacaoChefe;
-
+    
     const pilotos = corridaDados.pilotos1;
     const pontuacaoPorPosicao = corridaDados.pontuacaoPorPosicao;
     const equipes = corridaDados.equipes;
     const motores = corridaDados.motores;
     const tecnico = corridaDados.tecnicos;
+
+    const piloto1Storage = JSON.parse(localStorage.getItem('piloto1'));
+    const piloto2Storage = JSON.parse(localStorage.getItem('piloto2'));
+    const equipeStorage = JSON.parse(localStorage.getItem('equipe'));
+    const motorStorage = JSON.parse(localStorage.getItem('motor'));
+    const chefeStorage = JSON.parse(localStorage.getItem('tecnico'));
+
+    const piloto1 = piloto1Storage ? piloto1Storage[0] : null;
+    const piloto2 = piloto2Storage ? piloto2Storage[0] : null;
+    const equipe = equipeStorage ? equipeStorage[0] : null;
+    const motor = motorStorage ? motorStorage[0] : null;
+    const chefe = chefeStorage ? chefeStorage[0] : null;
 
     const [baterias, setBaterias] = useState(pilotos.map(p => ({ ...p, bateria: 100 })));
     const [posicoes, setPosicoes] = useState(pilotos.map((p, index) => ({ ...p, posicao: index + 1 })));
@@ -56,10 +64,7 @@ export const ClassPilotos = () => {
         }));
     }, [posicoes]);
 
-    const calcularPontuacaoTotal = () => {
-        return pontuacaoPiloto1 + pontuacaoPiloto2 + pontuacaoEquipe + pontuacaoMotor + pontuacaoChefe;
-    };
-
+    
     const calcularPontuacaoEquipes = () => {
         return equipes.map(equipe => {
             const pontuacaoTotal = equipe.pilotos.reduce((total, pilotoNome) => total + getPontuacaoPorNome(pilotoNome), 0);
@@ -95,16 +100,32 @@ export const ClassPilotos = () => {
     const pontuacoesMotores = calcularPontuacaoMotores();
     const pontuacoesTecnicos = calcularPontuacaoTecnicos();
 
+    const calcularPontuacaoTotal = (piloto1, piloto2, equipe, motor, chefe) => {
+        const pontuacaoPilotos1 = piloto1 ? getPontuacaoPorNome(piloto1.nome) : 0;
+        const pontuacaoPilotos2 = piloto2 ? getPontuacaoPorNome(piloto2.nome) : 0;
+        const pontuacaoEquipe = equipe ? calcularPontuacaoEquipes().find(e => e.nome === equipe.nome)?.pontuacao || 0 : 0;
+        const pontuacaoMotor = motor ? calcularPontuacaoMotores().find(m => m.nome === motor.nome)?.pontuacao || 0 : 0;
+        const pontuacaoChefe = chefe ? calcularPontuacaoTecnicos().find(t => t.nome === chefe.nome)?.pontuacao || 0 : 0;
+    
+        const pontuacaoTotal = (pontuacaoPilotos1 + pontuacaoPilotos2 + pontuacaoEquipe + pontuacaoMotor + pontuacaoChefe).toFixed(2);
+        
+        
+        localStorage.setItem('pontuacaoTotal', pontuacaoTotal);
+    
+        return pontuacaoTotal;
+    };
+    
+    
     return (
         <div className='classPilotos'>
             <div className='escolhasUser'>
-            <p>Pontuação Total: {calcularPontuacaoTotal()}</p>
+            <p>Pontuação Total: {calcularPontuacaoTotal(piloto1, piloto2, equipe, motor, chefe)}</p>
             <ul>
-                <li>PILOTO 1 - {piloto1 ? piloto1.nome : 'Não selecionado'} = {pontuacaoPiloto1}</li>
-                <li>PILOTO 2 - {piloto2 ? piloto2.nome : 'Não selecionado'} = {pontuacaoPiloto2}</li>
-                <li>EQUIPE - {equipe ? equipe.nome : 'Não selecionada'} = {pontuacaoEquipe}</li>
-                <li>MOTOR - {motor ? motor.nome : 'Não selecionado'} = {pontuacaoMotor}</li>
-                <li>CHEFE DE EQUIPE - {chefe ? chefe.nome : 'Não selecionado'} = {pontuacaoChefe.toFixed(2)}</li>
+                <li>PILOTO 1 - {piloto1 ? piloto1.nome : 'Não selecionado'} = {getPontuacaoPorNome(piloto1?.nome) || 0}</li>
+                <li>PILOTO 2 - {piloto2 ? piloto2.nome : 'Não selecionado'} = {getPontuacaoPorNome(piloto2?.nome) || 0}</li>
+                <li>EQUIPE - {equipe ? equipe.nome : 'Não selecionada'} = {calcularPontuacaoEquipes().find(e => e.nome === equipe?.nome)?.pontuacao || 0}</li>
+                <li>MOTOR - {motor ? motor.nome : 'Não selecionado'} = {calcularPontuacaoMotores().find(m => m.nome === motor?.nome)?.pontuacao || 0}</li>
+                <li>CHEFE DE EQUIPE - {chefe ? chefe.nome : 'Não selecionado'} = {calcularPontuacaoTecnicos().find(t => t.nome === chefe?.nome)?.pontuacao.toFixed(2) || 0}</li>
             </ul>
             </div>
 
@@ -113,11 +134,12 @@ export const ClassPilotos = () => {
                     <h2>Classificação da Corrida</h2>
                     {posicoes.map((piloto, index) => (
                         <li key={index} className="piloto-item">
-                            {piloto.posicao} - {piloto.nome} <i class="fa-solid fa-bolt"></i>
+                            {piloto.posicao} - {piloto.nome} <div className='dados'><i class="fa-solid fa-bolt"></i>
                             <div className="bateria">
                                 <div className="bateria-nivel" style={{ width: `${baterias[index].bateria}%` }}></div>
                             </div>
                             <div>Pontos: {pontuacoes[index]}</div>
+                            </div>
                         </li>
                     ))}
                 </ul>

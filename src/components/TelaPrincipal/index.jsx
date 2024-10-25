@@ -10,8 +10,6 @@ import { PaginaInicial } from '../PaginaInicial/index.jsx'
 import Estatisticas from '../Estatisticas/index.jsx'
 import { Ranking } from '../Ranking/index.jsx'
 import dados from '../../json/dados.json'
-
-
 export const TelaPrincipal = ({ telaAtiva }) => {
     localStorage.setItem('pilotos1', JSON.stringify(dados.pilotos1));
     localStorage.setItem('pilotos2', JSON.stringify(dados.pilotos2));
@@ -148,10 +146,11 @@ export const TelaPrincipal = ({ telaAtiva }) => {
         case 'tela2':
             return (
                 <div className="tela-principal estatisticas">
-                    <Estatisticas />
+                    
+                    <Estatisticas />   
+                                  
                 </div>
-            )
-
+              );
         case 'tela3':
             return (
                 <div className="tela-principal conversas">

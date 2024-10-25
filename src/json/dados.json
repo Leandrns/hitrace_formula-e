@@ -180,7 +180,7 @@
             "preco": 14,
             "desempenho": 12
         },
-        { "nome": "Porsche 99X", "equipes": ["Porsche"] },
+        
         {
             "id": 1,
             "tipo": "motor",
@@ -191,6 +191,7 @@
             "preco": 15,
             "desempenho": 13
         },
+        { "nome": "Porsche 99X", "equipes": ["Porsche"] },
         { "nome": "Nissan e-4ORCE", "equipes": ["MacLaren", "Nissan"] }
     ]
 }

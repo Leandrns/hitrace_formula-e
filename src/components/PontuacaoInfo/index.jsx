@@ -1,18 +1,22 @@
-import React, { useContext } from 'react';
-import './style.css';
-import { PontuacaoContext } from '../../context/PontuacaoContext';
-const PontuacaoInfo = ({ pontuacaoWehrlein, pontuacaoEvans, pontuacaoMahindra, pontuacaoMahindraBio }) => {
-    const { pontuacaoTotal, adicionarPontuacao } = useContext(PontuacaoContext);
+// src/components/PontuacaoInfo.jsx
+import React, { useEffect, useState } from 'react';
 
-    // Calcula a pontuação total com os valores passados como props
-    const pontuacaoCalculada = pontuacaoWehrlein + pontuacaoEvans + pontuacaoMahindra + pontuacaoMahindraBio + 1;
+const PontuacaoInfo = () => {
+    const [pontuacaoTotal, setPontuacaoTotal] = useState(0);
 
-    return (
+    useEffect(() => {
+        // Recuperar do localStorage
+        const storedPontuacaoTotal = localStorage.getItem('pontuacaoTotal');
+        if (storedPontuacaoTotal) {
+            setPontuacaoTotal(parseFloat(storedPontuacaoTotal));
+        }
+    }, []);
+    return(
         <div className="score-item">
-            <h4>Pontuação</h4>
+            <h4>Pontuação</h4> 
             <p>{pontuacaoTotal}</p>
         </div>
-    );
+    )
 };
 
 export default PontuacaoInfo;
