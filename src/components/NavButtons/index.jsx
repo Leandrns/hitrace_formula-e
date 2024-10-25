@@ -1,14 +1,14 @@
 import Button from '../BtnNav'; // Verifique se o caminho está correto
 import './style.css';
 
-const NavButtons = ( {telaAtiva, setTelaAtual} ) => {
+const NavButtons = () => {
     const buttons = [
-        { text: 'HitRace PRO', id: 'tela0'},
-        { text: 'Escale sua equipe', id: 'tela1' },
-        { text: 'Estatísticas', id: 'tela2' }, 
-        { text: 'Conversas', id: 'tela3' }, 
-        { text: 'Entenda o jogo', id: 'tela4' }, 
-        { text: 'Ranking', id: 'tela5'}
+        { text: 'HitRace PRO', id: 'tela0', path: "/pro" },
+        { text: 'Escale sua equipe', id: 'tela1', path: "/escalacao" },
+        { text: 'Estatísticas', id: 'tela2', path: "/estatisticas" }, 
+        { text: 'Conversas', id: 'tela3', path: "/conversas" }, 
+        { text: 'Entenda o jogo', id: 'tela4', path: "/entendaojogo" }, 
+        { text: 'Ranking', id: 'tela5', path: "/ranking" }
     ];
         
     return (
@@ -16,10 +16,7 @@ const NavButtons = ( {telaAtiva, setTelaAtual} ) => {
             {buttons.map((button) => (
                 <Button key={button.id} 
                         text={button.text}
-                        isActive={telaAtiva === button.id}
-                        onClick={() => {
-                            setTelaAtual(button.id)
-                        }} />
+                        path={button.path} />
             ))}
         </div>
     );

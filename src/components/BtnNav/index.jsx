@@ -1,11 +1,11 @@
+import { Link } from 'react-router-dom';
 import './style.css';
 
-const Button = ({ text, isActive, onClick }) => { 
+const Button = ({ text, isActive, path }) => { 
     return (
-        <button className={isActive ? 'nav-button active' : 'nav-button'}
-                onClick={onClick}>
-            {text}
-        </button>
+            <Link to={path} className={isActive ? 'link-button active' : 'link-button'}>
+                <button className='nav-button'>{text}</button>
+            </Link>
     );
 };
 

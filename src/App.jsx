@@ -1,13 +1,12 @@
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom'
 import { Header } from './components/Header';
 import { Aside } from './components/Aside';
 import { TelaPrincipal } from './components/TelaPrincipal';
 import { UserProvider } from './context/UserContext';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 function App() {
-    const [telaAtual, setTelaAtual] = useState('');
-
     useEffect(() => {
         const aside = document.querySelector('.aside');
         const openAside = document.querySelector('.openAside');
@@ -26,15 +25,18 @@ function App() {
     }, []);
 
     return (
-        <UserProvider>
-            <div className="App">
-                <Header />
-                <div className="containerHR">
-                    <Aside telaAtiva={telaAtual} setTelaAtual={setTelaAtual} />
-                    <TelaPrincipal telaAtiva={telaAtual} />
+        <Router>
+            <UserProvider>
+                <div className="App">
+                    <Header />
+                    <div className="containerHR">
+                        <Aside />
+                        <TelaPrincipal />
+                    </div>
                 </div>
-            </div>
-        </UserProvider>
+            </UserProvider>
+        </Router>
+        
     );
 }
 
