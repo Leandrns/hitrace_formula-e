@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import './style.css'
 
-const textoOpcoes = ['Início', 'Notícias', 'HitRace Formula E']
+const textoOpcoes = ['Início', 'Notícias', 'HitRace']
 
 export const OpcoesHeader = () => {
     useEffect(() => {
