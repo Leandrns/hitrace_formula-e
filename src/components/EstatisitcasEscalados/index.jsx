@@ -30,10 +30,10 @@ export const EstatisticasEscalados = () => {
             <div className='chfs'>
             <h3>Chefes</h3>
             <div className='persona'>
-                <img src='Sylvain.png' />
+                <img src='/Tommaso_Volpe.png' />
                 <div className='nomes'>
-                    <h5>Sylvian FILIPPI</h5>
-                    <p>Envision</p>
+                    <h5>Tommaso Volpe</h5>
+                    <p>Nissan</p>
                 </div>
             </div>
             <div className='persona'>

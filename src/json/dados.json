@@ -267,7 +267,7 @@
                 "Jaguar Type-6"
             ],
             "equipe": "Jaguar",
-            "img": "",
+            "img": "/james_barclay.png",
             "preco": 14,
             "desempenho": 11
         },
@@ -280,7 +280,7 @@
                 "Nissan e-4ORCE"
             ],
             "equipe": "Nissan",
-            "img": "",
+            "img": "/Tommaso_Volpe.png",
             "preco": 14,
             "desempenho": 11
         }
@@ -302,7 +302,7 @@
         {
             "id": 1,
             "tipo": "equipe",
-            "nome": "Jaguar",
+            "nome": "Jaguar TCS Racing",
             "equipe": "",
             "pilotos": [
                 "Mitch EVANS"
@@ -329,8 +329,7 @@
             "tipo": "equipe",
             "nome": "Penske",
             "pilotos": [
-                "Vergne",
-                "Vandoorne"
+                "Jean-Éric VERGNE"
             ],
             "equipe": "",
             "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/e05ede6d-d065-497b-a298-85afeeeb2ab1.png",
@@ -342,7 +341,7 @@
             "tipo": "equipe",
             "nome": "ERT",
             "pilotos": [
-                "Di Grassi"
+                "Di GRASSI"
             ],
             "equipe": "",
             "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/5ac8091a-b415-4abb-a7ef-fb5511e545d5.png",
@@ -352,9 +351,9 @@
         {
             "id": 5,
             "tipo": "equipe",
-            "nome": "Mclaren",
+            "nome": "McLaren",
             "pilotos": [
-                "Hughes"
+                "Jake HUGHES"
             ],
             "equipe": "",
             "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/0176f3e2-1247-494d-9a8d-b0950437ee8f.png",
@@ -367,7 +366,7 @@
             "nome": "Nissan",
             "pilotos": [
                 "Rowland",
-                "Vandoorne"
+                "Stoffel VANDOORNE"
             ],
             "equipe": "",
             "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/6c04a435-8357-42f6-8360-5305d00050ee.png",
@@ -379,7 +378,7 @@
         {
             "id": 0,
             "tipo": "motor",
-            "nome": "Jaguar I-Type 6",
+            "nome": "Jaguar Type-6",
             "equipe": "",
             "equipes": [
                 "Jaguar TCS Racing",
@@ -419,7 +418,7 @@
             "tipo": "motor",
             "nome": "Nissan e-4ORCE",
             "equipes": [
-                "MacLaren",
+                "McLaren",
                 "Nissan"
             ],
             "equipe": "",
