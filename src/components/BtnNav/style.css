@@ -1,9 +1,9 @@
 .nav-button {
-    height: 2rem;
+    height: 2.2rem;
     font-size: 10px;
 }
 
-.nav-button.active {
+.link-button.active .nav-button{
     background-color: #46DEFF; 
     color: black;
     font-weight: 600;

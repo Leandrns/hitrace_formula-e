@@ -27,7 +27,7 @@
   box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.733);
 }
 
-.nav-button:first-child{
+.link-button:first-child .nav-button{
   background-color: #ebc417;
   
 }
@@ -47,7 +47,7 @@
   }
 }
 
-.nav-button:first-child:hover {
+.link-button:first-child:hover .nav-button{
   background-image: url(../../images/gold.gif); /* Nova imagem de fundo */
     background-size: cover; /* Ajusta o tamanho da imagem */
   color: white;

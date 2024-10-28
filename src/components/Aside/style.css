@@ -23,7 +23,7 @@
     top: 20px;
     right: -15px;
     background-color: #0e29b4;
-    padding: 8px;
+    padding: 12px;
     border-radius: 10px;
     color: #f1f1f1;
     cursor: pointer;
@@ -59,7 +59,7 @@
 
     .openAside {
         display: flex;
-        right: -22px;
+        right: -30px;
     }
 }
 

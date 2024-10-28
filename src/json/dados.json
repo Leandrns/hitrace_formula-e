@@ -39,25 +39,81 @@
         },
         {
             "id": 4,
-            "tipo": "piloto2",
+            "tipo": "piloto1",
             "nome": "Edoardo MORTARA",
             "equipe": "Mahindra Racing",
             "img": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/728b2253-b9d4-47dd-9051-e970bff2a62f.png",
             "preco": 16,
             "desempenho": 13
         },
-        { "nome": "Buemi", "equipe": "Envision" },
-        { "nome": "Vergne", "equipe": "DS Techeetah" },
-        { "nome": "Müller", "equipe": "Cupra" },
-        { "nome": "Frijns", "equipe": "Envision" },
-        { "nome": "Vandoorne", "equipe": "Nissan" },
-        { "nome": "Di Grassi", "equipe": "ERT" },
-        { "nome": "Hughes", "equipe": "McLaren" }
+        { 
+            "id": 5,
+            "tipo": "piloto1",
+            "nome": "Buemi", 
+            "equipe": "Envision",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Buemi-768x792.png",
+            "preco": 15,
+            "desempenho": 12
+        },
+        { 
+            "id": 6,
+            "tipo": "piloto1",
+            "nome": "Vergne", 
+            "equipe": "DS Techeetah",
+            "img": "https://vignette.wikia.nocookie.net/formula-e/images/4/4e/Jean-Eric_Vergne.png/revision/latest?cb=20180425084839",
+            "preco": 14,
+            "desempenho": 11
+        },
+        { 
+            "id": 7,
+            "tipo": "piloto1",
+            "nome": "Müller", 
+            "equipe": "Cupra",
+            "img": "https://www.formula1online.net/team-logo/Nico-M%C3%BCller.png",
+            "preco": 15,
+            "desempenho": 12
+        },
+        { 
+            "id": 8,
+            "tipo": "piloto1",
+            "nome": "Frijns", 
+            "equipe": "Envision",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Frijns.png",
+            "preco": 16,
+            "desempenho": 14 
+        },
+        { 
+            "id": 9,
+            "tipo": "piloto1",
+            "nome": "Vandoorne", 
+            "equipe": "Nissan",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Vandoorne.png",
+            "preco": 17,
+            "desempenho": 15 
+        },
+        { 
+            "id": 10,
+            "tipo": "piloto1",
+            "nome": "Di Grassi", 
+            "equipe": "ERT",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/12/Di-Grassi-485x500.png",
+            "preco": 15,
+            "desempenho": 12 
+        },
+        { 
+            "id": 11,
+            "tipo": "piloto1",
+            "nome": "Hughes", 
+            "equipe": "McLaren",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/12/Hughes-485x500.png",
+            "preco": 18,
+            "desempenho": 16 
+        }
     ],
     "pilotos2": [
         {
             "id": 0,
-            "tipo": "piloto1",
+            "tipo": "piloto2",
             "nome": "Nick DE VRIES",
             "equipe": "Mahindra Racing",
             "img": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/large/8bd68290-c0ad-43b6-a1ce-ee162b7d8914.png",
@@ -100,13 +156,69 @@
             "preco": 16,
             "desempenho": 13
         },
-        { "nome": "Buemi", "equipe": "Envision" },
-        { "nome": "Vergne", "equipe": "DS Techeetah" },
-        { "nome": "Müller", "equipe": "Cupra" },
-        { "nome": "Frijns", "equipe": "Envision" },
-        { "nome": "Vandoorne", "equipe": "Nissan" },
-        { "nome": "Di Grassi", "equipe": "ERT" },
-        { "nome": "Hughes", "equipe": "McLaren" }
+        { 
+            "id": 5,
+            "tipo": "piloto2",
+            "nome": "Buemi", 
+            "equipe": "Envision",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Buemi-768x792.png",
+            "preco": 15,
+            "desempenho": 12
+        },
+        { 
+            "id": 6,
+            "tipo": "piloto2",
+            "nome": "Vergne", 
+            "equipe": "DS Techeetah",
+            "img": "https://vignette.wikia.nocookie.net/formula-e/images/4/4e/Jean-Eric_Vergne.png/revision/latest?cb=20180425084839",
+            "preco": 14,
+            "desempenho": 11
+        },
+        { 
+            "id": 7,
+            "tipo": "piloto2",
+            "nome": "Müller", 
+            "equipe": "Cupra",
+            "img": "https://www.formula1online.net/team-logo/Nico-M%C3%BCller.png",
+            "preco": 15,
+            "desempenho": 12
+        },
+        { 
+            "id": 8,
+            "tipo": "piloto2",
+            "nome": "Frijns", 
+            "equipe": "Envision",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Frijns.png",
+            "preco": 16,
+            "desempenho": 14 
+        },
+        { 
+            "id": 9,
+            "tipo": "piloto2",
+            "nome": "Vandoorne", 
+            "equipe": "Nissan",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Vandoorne.png",
+            "preco": 17,
+            "desempenho": 15 
+        },
+        { 
+            "id": 10,
+            "tipo": "piloto2",
+            "nome": "Di Grassi", 
+            "equipe": "ERT",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/12/Di-Grassi-485x500.png",
+            "preco": 15,
+            "desempenho": 12 
+        },
+        { 
+            "id": 11,
+            "tipo": "piloto2",
+            "nome": "Hughes", 
+            "equipe": "McLaren",
+            "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/12/Hughes-485x500.png",
+            "preco": 18,
+            "desempenho": 16 
+        }
     ],
     "tecnicos": [
         {
