@@ -46,13 +46,69 @@
             "preco": 16,
             "desempenho": 13
         },
-        { "nome": "Buemi", "equipe": "Envision" },
-        { "nome": "Vergne", "equipe": "DS Techeetah" },
-        { "nome": "Müller", "equipe": "Cupra" },
-        { "nome": "Frijns", "equipe": "Envision" },
-        { "nome": "Vandoorne", "equipe": "Nissan" },
-        { "nome": "Di Grassi", "equipe": "ERT" },
-        { "nome": "Hughes", "equipe": "McLaren" }
+        { 
+            "id": 5,
+            "tipo": "piloto1",
+            "nome": "Buemi", 
+            "equipe": "Envision",
+            "img": "",
+            "preco": 15,
+            "desempenho": 12
+        },
+        { 
+            "id": 6,
+            "tipo": "piloto1",
+            "nome": "Vergne", 
+            "equipe": "DS Techeetah",
+            "img": "",
+            "preco": 14,
+            "desempenho": 11
+        },
+        { 
+            "id": 7,
+            "tipo": "piloto1",
+            "nome": "Müller", 
+            "equipe": "Cupra",
+            "img": "",
+            "preco": 15,
+            "desempenho": 12
+        },
+        { 
+            "id": 8,
+            "tipo": "piloto1",
+            "nome": "Frijns", 
+            "equipe": "Envision",
+            "img": "",
+            "preco": 16,
+            "desempenho": 14 
+        },
+        { 
+            "id": 9,
+            "tipo": "piloto1",
+            "nome": "Vandoorne", 
+            "equipe": "Nissan",
+            "img": "",
+            "preco": 17,
+            "desempenho": 15 
+        },
+        { 
+            "id": 10,
+            "tipo": "piloto1",
+            "nome": "Di Grassi", 
+            "equipe": "ERT",
+            "img": "",
+            "preco": 15,
+            "desempenho": 12 
+        },
+        { 
+            "id": 11,
+            "tipo": "piloto1",
+            "nome": "Hughes", 
+            "equipe": "McLaren",
+            "img": "",
+            "preco": 18,
+            "desempenho": 16 
+        }
     ],
     "pilotos2": [
         {
@@ -100,13 +156,69 @@
             "preco": 16,
             "desempenho": 13
         },
-        { "nome": "Buemi", "equipe": "Envision" },
-        { "nome": "Vergne", "equipe": "DS Techeetah" },
-        { "nome": "Müller", "equipe": "Cupra" },
-        { "nome": "Frijns", "equipe": "Envision" },
-        { "nome": "Vandoorne", "equipe": "Nissan" },
-        { "nome": "Di Grassi", "equipe": "ERT" },
-        { "nome": "Hughes", "equipe": "McLaren" }
+        { 
+            "id": 5,
+            "tipo": "piloto2",
+            "nome": "Buemi", 
+            "equipe": "Envision",
+            "img": "",
+            "preco": 15,
+            "desempenho": 12
+        },
+        { 
+            "id": 6,
+            "tipo": "piloto2",
+            "nome": "Vergne", 
+            "equipe": "DS Techeetah",
+            "img": "",
+            "preco": 14,
+            "desempenho": 11
+        },
+        { 
+            "id": 7,
+            "tipo": "piloto2",
+            "nome": "Müller", 
+            "equipe": "Cupra",
+            "img": "",
+            "preco": 15,
+            "desempenho": 12
+        },
+        { 
+            "id": 8,
+            "tipo": "piloto2",
+            "nome": "Frijns", 
+            "equipe": "Envision",
+            "img": "",
+            "preco": 16,
+            "desempenho": 14 
+        },
+        { 
+            "id": 9,
+            "tipo": "piloto2",
+            "nome": "Vandoorne", 
+            "equipe": "Nissan",
+            "img": "",
+            "preco": 17,
+            "desempenho": 15 
+        },
+        { 
+            "id": 10,
+            "tipo": "piloto2",
+            "nome": "Di Grassi", 
+            "equipe": "ERT",
+            "img": "",
+            "preco": 15,
+            "desempenho": 12 
+        },
+        { 
+            "id": 11,
+            "tipo": "piloto2",
+            "nome": "Hughes", 
+            "equipe": "McLaren",
+            "img": "",
+            "preco": 18,
+            "desempenho": 16 
+        }
     ],
     "tecnicos": [
         {
