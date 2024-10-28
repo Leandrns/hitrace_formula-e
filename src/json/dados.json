@@ -60,7 +60,7 @@
         {
             "id": 5,
             "tipo": "piloto1",
-            "nome": "Buemi",
+            "nome": "Sebastian BUEMI",
             "equipe": "Envision",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Buemi-768x792.png",
             "preco": 15,
@@ -69,7 +69,7 @@
         {
             "id": 6,
             "tipo": "piloto1",
-            "nome": "Vergne",
+            "nome": "Jean-Éric VERGNE",
             "equipe": "DS Techeetah",
             "img": "https://vignette.wikia.nocookie.net/formula-e/images/4/4e/Jean-Eric_Vergne.png/revision/latest?cb=20180425084839",
             "preco": 14,
@@ -78,7 +78,7 @@
         {
             "id": 7,
             "tipo": "piloto1",
-            "nome": "Müller",
+            "nome": "Nico MÜLLER",
             "equipe": "Cupra",
             "img": "https://www.formula1online.net/team-logo/Nico-M%C3%BCller.png",
             "preco": 15,
@@ -87,7 +87,7 @@
         {
             "id": 8,
             "tipo": "piloto1",
-            "nome": "Frijns",
+            "nome": "Robin FRIJNS",
             "equipe": "Envision",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Frijns.png",
             "preco": 16,
@@ -96,7 +96,7 @@
         {
             "id": 9,
             "tipo": "piloto1",
-            "nome": "Vandoorne",
+            "nome": "Stoffel VANDOORNE",
             "equipe": "Nissan",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Vandoorne.png",
             "preco": 17,
@@ -105,7 +105,7 @@
         {
             "id": 10,
             "tipo": "piloto1",
-            "nome": "Di Grassi",
+            "nome": "Di GRASSI",
             "equipe": "ERT",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/12/Di-Grassi-485x500.png",
             "preco": 15,
@@ -114,7 +114,7 @@
         {
             "id": 11,
             "tipo": "piloto1",
-            "nome": "Hughes",
+            "nome": "Jake HUGHES",
             "equipe": "McLaren",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/12/Hughes-485x500.png",
             "preco": 18,
@@ -170,7 +170,7 @@
         {
             "id": 5,
             "tipo": "piloto2",
-            "nome": "Buemi",
+            "nome": "Sebastian BUEMI",
             "equipe": "Envision",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Buemi-768x792.png",
             "preco": 15,
@@ -179,7 +179,7 @@
         {
             "id": 6,
             "tipo": "piloto2",
-            "nome": "Vergne",
+            "nome": "Jean-Éric VERGNE",
             "equipe": "DS Techeetah",
             "img": "https://vignette.wikia.nocookie.net/formula-e/images/4/4e/Jean-Eric_Vergne.png/revision/latest?cb=20180425084839",
             "preco": 14,
@@ -188,7 +188,7 @@
         {
             "id": 7,
             "tipo": "piloto2",
-            "nome": "Müller",
+            "nome": "Nico MÜLLER",
             "equipe": "Cupra",
             "img": "https://www.formula1online.net/team-logo/Nico-M%C3%BCller.png",
             "preco": 15,
@@ -197,7 +197,7 @@
         {
             "id": 8,
             "tipo": "piloto2",
-            "nome": "Frijns",
+            "nome": "Robin FRIJNS",
             "equipe": "Envision",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Frijns.png",
             "preco": 16,
@@ -206,7 +206,7 @@
         {
             "id": 9,
             "tipo": "piloto2",
-            "nome": "Vandoorne",
+            "nome": "Stoffel VANDOORNE",
             "equipe": "Nissan",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/02/Vandoorne.png",
             "preco": 17,
@@ -215,7 +215,7 @@
         {
             "id": 10,
             "tipo": "piloto2",
-            "nome": "Di Grassi",
+            "nome": "Di GRASSI",
             "equipe": "ERT",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/12/Di-Grassi-485x500.png",
             "preco": 15,
@@ -224,7 +224,7 @@
         {
             "id": 11,
             "tipo": "piloto2",
-            "nome": "Hughes",
+            "nome": "Jake HUGHES",
             "equipe": "McLaren",
             "img": "https://www.formulaechampionship.com/wp-content/uploads/2023/12/Hughes-485x500.png",
             "preco": 18,
@@ -333,7 +333,7 @@
                 "Vandoorne"
             ],
             "equipe": "",
-            "img": "",
+            "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/e05ede6d-d065-497b-a298-85afeeeb2ab1.png",
             "preco": 13,
             "desempenho": 12
         },
@@ -345,7 +345,7 @@
                 "Di Grassi"
             ],
             "equipe": "",
-            "img": "",
+            "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/5ac8091a-b415-4abb-a7ef-fb5511e545d5.png",
             "preco": 14,
             "desempenho": 13
         },
@@ -357,7 +357,7 @@
                 "Hughes"
             ],
             "equipe": "",
-            "img": "",
+            "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/0176f3e2-1247-494d-9a8d-b0950437ee8f.png",
             "preco": 17,
             "desempenho": 16
         },
@@ -370,7 +370,7 @@
                 "Vandoorne"
             ],
             "equipe": "",
-            "img": "",
+            "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/6c04a435-8357-42f6-8360-5305d00050ee.png",
             "preco": 16,
             "desempenho": 15
         }
@@ -410,7 +410,7 @@
                 "Porsche"
             ],
             "equipe": "",
-            "img": "",
+            "img": "https://th.bing.com/th/id/R.f931e3d92a8e1d56e666ca2d8b45cc25?rik=WkbcA5%2bQUfNHNQ&pid=ImgRaw&r=0",
             "preco": 16,
             "desempenho": 14
         },
@@ -423,7 +423,7 @@
                 "Nissan"
             ],
             "equipe": "",
-            "img": "",
+            "img": "https://th.bing.com/th/id/R.b7c6cda64c4255250b3a2c5cf351405e?rik=4vyia5g1kUtwWA&riu=http%3a%2f%2fwww.car-brand-names.com%2fwp-content%2fuploads%2f2015%2f08%2fNissan-logo.png&ehk=RtVI4VnRKMe7jXPLf5hHcwFsh6p9GsU50fLMHDIcPMI%3d&risl=&pid=ImgRaw&r=0",
             "preco": 15,
             "desempenho": 13
         }
