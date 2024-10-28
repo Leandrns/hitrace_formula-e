@@ -1,5 +1,16 @@
 {
-    "pontuacaoPorPosicao": [25, 18, 15, 12, 10, 8, 6, 4, 2, 2],
+    "pontuacaoPorPosicao": [
+        25,
+        18,
+        15,
+        12,
+        10,
+        8,
+        6,
+        4,
+        2,
+        2
+    ],
     "pilotos1": [
         {
             "id": 0,
@@ -46,68 +57,68 @@
             "preco": 16,
             "desempenho": 13
         },
-        { 
+        {
             "id": 5,
             "tipo": "piloto1",
-            "nome": "Buemi", 
+            "nome": "Buemi",
             "equipe": "Envision",
             "img": "",
             "preco": 15,
             "desempenho": 12
         },
-        { 
+        {
             "id": 6,
             "tipo": "piloto1",
-            "nome": "Vergne", 
+            "nome": "Vergne",
             "equipe": "DS Techeetah",
             "img": "",
             "preco": 14,
             "desempenho": 11
         },
-        { 
+        {
             "id": 7,
             "tipo": "piloto1",
-            "nome": "Müller", 
+            "nome": "Müller",
             "equipe": "Cupra",
             "img": "",
             "preco": 15,
             "desempenho": 12
         },
-        { 
+        {
             "id": 8,
             "tipo": "piloto1",
-            "nome": "Frijns", 
+            "nome": "Frijns",
             "equipe": "Envision",
             "img": "",
             "preco": 16,
-            "desempenho": 14 
+            "desempenho": 14
         },
-        { 
+        {
             "id": 9,
             "tipo": "piloto1",
-            "nome": "Vandoorne", 
+            "nome": "Vandoorne",
             "equipe": "Nissan",
             "img": "",
             "preco": 17,
-            "desempenho": 15 
+            "desempenho": 15
         },
-        { 
+        {
             "id": 10,
             "tipo": "piloto1",
-            "nome": "Di Grassi", 
+            "nome": "Di Grassi",
             "equipe": "ERT",
             "img": "",
             "preco": 15,
-            "desempenho": 12 
+            "desempenho": 12
         },
-        { 
+        {
             "id": 11,
             "tipo": "piloto1",
-            "nome": "Hughes", 
+            "nome": "Hughes",
             "equipe": "McLaren",
             "img": "",
             "preco": 18,
-            "desempenho": 16 
+            "desempenho": 16
         }
     ],
     "pilotos2": [
@@ -156,68 +167,68 @@
             "preco": 16,
             "desempenho": 13
         },
-        { 
+        {
             "id": 5,
             "tipo": "piloto2",
-            "nome": "Buemi", 
+            "nome": "Buemi",
             "equipe": "Envision",
             "img": "",
             "preco": 15,
             "desempenho": 12
         },
-        { 
+        {
             "id": 6,
             "tipo": "piloto2",
-            "nome": "Vergne", 
+            "nome": "Vergne",
             "equipe": "DS Techeetah",
             "img": "",
             "preco": 14,
             "desempenho": 11
         },
-        { 
+        {
             "id": 7,
             "tipo": "piloto2",
-            "nome": "Müller", 
+            "nome": "Müller",
             "equipe": "Cupra",
             "img": "",
             "preco": 15,
             "desempenho": 12
         },
-        { 
+        {
             "id": 8,
             "tipo": "piloto2",
-            "nome": "Frijns", 
+            "nome": "Frijns",
             "equipe": "Envision",
             "img": "",
             "preco": 16,
-            "desempenho": 14 
+            "desempenho": 14
         },
-        { 
+        {
             "id": 9,
             "tipo": "piloto2",
-            "nome": "Vandoorne", 
+            "nome": "Vandoorne",
             "equipe": "Nissan",
             "img": "",
             "preco": 17,
-            "desempenho": 15 
+            "desempenho": 15
         },
-        { 
+        {
             "id": 10,
             "tipo": "piloto2",
-            "nome": "Di Grassi", 
+            "nome": "Di Grassi",
             "equipe": "ERT",
             "img": "",
             "preco": 15,
-            "desempenho": 12 
+            "desempenho": 12
         },
-        { 
+        {
             "id": 11,
             "tipo": "piloto2",
-            "nome": "Hughes", 
+            "nome": "Hughes",
             "equipe": "McLaren",
             "img": "",
             "preco": 18,
-            "desempenho": 16 
+            "desempenho": 16
         }
     ],
     "tecnicos": [
@@ -225,7 +236,10 @@
             "id": 0,
             "tipo": "tecnico",
             "nome": "Florian MODLINGER",
-            "componentes": ["Porsche", "Porsche 99X"],
+            "componentes": [
+                "Porsche",
+                "Porsche 99X"
+            ],
             "equipe": "Porsche",
             "img": "/Florian_porsche.png",
             "preco": 15,
@@ -235,15 +249,41 @@
             "id": 1,
             "tipo": "tecnico",
             "nome": "Frederic Bertrand",
-            "componentes": ["Mahindra Racing", "Mahindra M9Electro"],
-            
+            "componentes": [
+                "Mahindra Racing",
+                "Mahindra M9Electro"
+            ],
             "equipe": "Mahindra Racing",
             "img": "/bertrand_mahindra.png",
             "preco": 14,
             "desempenho": 11
         },
-        { "nome": "James Barclay", "componentes": ["Jaguar TCS Racing", "Jaguar Type-6"] },
-        { "nome": "Tommaso Volpe", "componentes": ["Nissan", "Nissan e-4ORCE"] }
+        {
+            "id": 2,
+            "tipo": "tecnico",
+            "nome": "James Barclay",
+            "componentes": [
+                "Jaguar TCS Racing",
+                "Jaguar Type-6"
+            ],
+            "equipe": "Jaguar",
+            "img": "",
+            "preco": 14,
+            "desempenho": 11
+        },
+        {
+            "id": 3,
+            "tipo": "tecnico",
+            "nome": "Tommaso Volpe",
+            "componentes": [
+                "Nissan",
+                "Nissan e-4ORCE"
+            ],
+            "equipe": "Nissan",
+            "img": "",
+            "preco": 14,
+            "desempenho": 11
+        }
     ],
     "equipes": [
         {
@@ -251,7 +291,10 @@
             "tipo": "equipe",
             "nome": "Mahindra Racing",
             "equipe": "",
-            "pilotos": ["Nick DE VRIES", "Edoardo MORTARA"],
+            "pilotos": [
+                "Nick DE VRIES",
+                "Edoardo MORTARA"
+            ],
             "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/fa97d2e7-02ca-4983-a930-4fdaa245a852.png",
             "preco": 15,
             "desempenho": 14
@@ -261,7 +304,9 @@
             "tipo": "equipe",
             "nome": "Jaguar",
             "equipe": "",
-            "pilotos": ["Mitch EVANS"],
+            "pilotos": [
+                "Mitch EVANS"
+            ],
             "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/05dab754-2899-411b-9c4e-72311a36cc9c.png",
             "preco": 14,
             "desempenho": 13
@@ -271,15 +316,64 @@
             "tipo": "equipe",
             "nome": "Porsche",
             "equipe": "",
-            "pilotos": ["Pascal WEHRLEIN", "Antonio Felix DA COSTA"],
+            "pilotos": [
+                "Pascal WEHRLEIN",
+                "Antonio Felix DA COSTA"
+            ],
             "img": "https://static-files.formula-e.pulselive.com/cars/84467676-4d5d-4c97-ae07-0b7520bb95ea/feb6762c-ae66-4c8e-a892-f958d6f7e774.png",
             "preco": 16,
             "desempenho": 15
         },
-        { "nome": "Penske", "pilotos": ["Vergne", "Vandoorne"] },
-        { "nome": "ERT", "pilotos": ["Di Grassi"] },
-        { "nome": "Mclaren", "pilotos": ["Hughes"] },
-        { "nome": "Nissan", "pilotos": ["Rowland", "Vandoorne"] }
+        {
+            "id": 3,
+            "tipo": "equipe",
+            "nome": "Penske",
+            "pilotos": [
+                "Vergne",
+                "Vandoorne"
+            ],
+            "equipe": "",
+            "img": "",
+            "preco": 13,
+            "desempenho": 12
+        },
+        {
+            "id": 4,
+            "tipo": "equipe",
+            "nome": "ERT",
+            "pilotos": [
+                "Di Grassi"
+            ],
+            "equipe": "",
+            "img": "",
+            "preco": 14,
+            "desempenho": 13
+        },
+        {
+            "id": 5,
+            "tipo": "equipe",
+            "nome": "Mclaren",
+            "pilotos": [
+                "Hughes"
+            ],
+            "equipe": "",
+            "img": "",
+            "preco": 17,
+            "desempenho": 16
+        },
+        {
+            "id": 6,
+            "tipo": "equipe",
+            "nome": "Nissan",
+            "pilotos": [
+                "Rowland",
+                "Vandoorne"
+            ],
+            "equipe": "",
+            "img": "",
+            "preco": 16,
+            "desempenho": 15
+        }
     ],
     "motores": [
         {
@@ -287,23 +381,51 @@
             "tipo": "motor",
             "nome": "Jaguar I-Type 6",
             "equipe": "",
-            "equipes": ["Jaguar TCS Racing", "Envision"],
+            "equipes": [
+                "Jaguar TCS Racing",
+                "Envision"
+            ],
             "img": "https://upload.wikimedia.org/wikipedia/pt/8/86/Logotipo_da_Jaguar_2012.png",
             "preco": 14,
             "desempenho": 12
         },
-        
         {
             "id": 1,
             "tipo": "motor",
             "nome": "Mahindra M9Electro",
             "equipe": "",
-            "equipes": ["Mahindra Racing", "ERT"],
+            "equipes": [
+                "Mahindra Racing",
+                "ERT"
+            ],
             "img": "https://cdn.worldvectorlogo.com/logos/mahindra-mahindra-logo.svg",
             "preco": 15,
             "desempenho": 13
         },
-        { "nome": "Porsche 99X", "equipes": ["Porsche"] },
-        { "nome": "Nissan e-4ORCE", "equipes": ["MacLaren", "Nissan"] }
+        {
+            "id": 2,
+            "tipo": "motor",
+            "nome": "Porsche 99X",
+            "equipes": [
+                "Porsche"
+            ],
+            "equipe": "",
+            "img": "",
+            "preco": 16,
+            "desempenho": 14
+        },
+        {
+            "id": 3,
+            "tipo": "motor",
+            "nome": "Nissan e-4ORCE",
+            "equipes": [
+                "MacLaren",
+                "Nissan"
+            ],
+            "equipe": "",
+            "img": "",
+            "preco": 15,
+            "desempenho": 13
+        }
     ]
 }
