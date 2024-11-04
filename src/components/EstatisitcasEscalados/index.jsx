@@ -37,7 +37,7 @@ export const EstatisticasEscalados = () => {
                 </div>
             </div>
             <div className='persona'>
-                <img src='http://localhost:3000/Florian_porsche.png' />
+                <img src='./Florian_porsche.png' />
                 <div className='nomes'>
                     <h5>Florian MODLINGER</h5>
                     <p>Porsche</p>
