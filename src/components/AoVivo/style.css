@@ -9,7 +9,6 @@
 .video-chat {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 40px;
     width: 100%;
     height: 100%;
@@ -65,5 +64,12 @@
 @media screen and (max-width: 720px) {
     .video-chat img {
         width: 95%;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .video-chat img {
+        height: 70vh;
+        width: auto;
     }
 }
