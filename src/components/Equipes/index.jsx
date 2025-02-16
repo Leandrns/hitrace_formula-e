@@ -1,5 +1,6 @@
 import { Escolha } from '../Escolha';
 import './style.css';
+import iconAdd from '../../images/icon_add.png';
 
 export const Equipes = ({exibirListaOpcoes}) => {
     let equipe = JSON.parse(localStorage.getItem('equipe'));
@@ -16,7 +17,7 @@ export const Equipes = ({exibirListaOpcoes}) => {
                     desempenho={equipe[0].desempenho}
                     onOpen={exibirListaOpcoes} 
                 />
-                : <Escolha nome='Escolha sua equipe' imgSrc='https://cdn.icon-icons.com/icons2/495/PNG/512/add-circle-1_icon-icons.com_48714.png' onOpen={exibirListaOpcoes}/>
+                : <Escolha nome='Escolha sua equipe' imgSrc={iconAdd} onOpen={exibirListaOpcoes}/>
             }
             </div>
         </div>

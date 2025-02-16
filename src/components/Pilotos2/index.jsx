@@ -1,5 +1,6 @@
 import './style.css'
 import { Escolha } from '../Escolha'
+import iconAdd from '../../images/icon_add.png';
 
 export const Pilotos2 = ({exibirListaOpcoes}) => {
     let piloto2 = JSON.parse(localStorage.getItem('piloto2')) || false;
@@ -14,7 +15,7 @@ export const Pilotos2 = ({exibirListaOpcoes}) => {
                     preco={piloto2[0].preco}
                     desempenho={piloto2[0].desempenho}
                     onOpen={exibirListaOpcoes}/>
-                : <Escolha nome='Escolha seu piloto 2' imgSrc='https://cdn.icon-icons.com/icons2/495/PNG/512/add-circle-1_icon-icons.com_48714.png' onOpen={exibirListaOpcoes}/>}
+                : <Escolha nome='Escolha seu piloto 2' imgSrc={iconAdd} onOpen={exibirListaOpcoes}/>}
             </div>
         </div>
     )
